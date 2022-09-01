@@ -1,0 +1,1568 @@
+# Here you can edit all chat messages.
+#
+# If you encounter any issues or have questions:
+# Discord: https://discord.gg/B4MAJVk
+#
+# Wiki: https://github.com/Angeschossen/General/wiki/Messages
+
+# General Strings
+# They currently do not support PlaceholderAPI. All (other) messages do.
+general:
+  prefix:
+    normal: '&8[&a영토&8] '
+    help: '&8[&a영토&8] &7사용법: '
+  wYes: '&a예'
+  wNo: '&c아니오'
+  none: '&8없음'
+  disabled: '&c비활성화됨'
+  wilderness: '&a야생'
+  unlimited: '&a제한없음'
+  server: Server
+  affiliation:
+    land: '&8[&2{land}&8]'
+    nation: '&8[&9{nation} &8|&2 {land}&8]'
+  land:
+    title:
+      land: '&7%level% &7of&3 %owner%&7.'
+      camp: '&7Camp of&3 %owner%&7.'
+      admin: '&77이 영토는 서버의 소유입니다.'
+    default-area: Default
+  area:
+    description:
+      default: '&7이 영역의 영토를 소유하게 됩니다.'
+      sub: '&7이것은 특별한 플래그와 멤버를 가질 수 있는 서브 영역입니다.'
+      rented: '&7이 영역은 {player} 님에게 임대 되었습니다.'
+      sold: '&7이 영역은 {player} 님에게 판매 되었습니다.'
+  time:
+    days: day(s)
+    hours: hour(s)
+    minutes: minute(s)
+    seconds: second(s)
+  status:
+    online: '&aonline'
+    offline: '&coffline'
+  top:
+    hologram:
+      land:
+        title: '&7&m━━━━━━━━━━━━━━<━&r &2Top 10 영토 &8(&7Total: {total}&8) &7&m━>━━━━━━━━━━━━━━'
+        entry: '&c#{pos} &2{object} &7{sorting}:&3 {value}'
+        footer: '&7&m━━━━━━━━━━━━━━<━&r &2Top 10 영토 &8(&7Total: {total}&8) &7&m━>━━━━━━━━━━━━━━'
+      nation:
+        title: '&7&m━━━━━━━━━━━━━━<━&r &2Top 10 국가 &8(&7Total: {total}&8) &7&m━>━━━━━━━━━━━━━━'
+        entry: '&c#{pos} &2{object} &7{sorting}:&3 {value}'
+        footer: '&7&m━━━━━━━━━━━━━━<━&r &2Top 10 국가 &8(&7Total: {total}&8) &7&m━>━━━━━━━━━━━━━━'
+  
+  integration:
+    dynmap:
+      land:
+        description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
+          200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
+          <ul> <li class="\&quot;infowindow\&quot;">Level: {level}</li> <li class="\&quot;infowindow\&quot;">Chunks:
+          {chunks}</li> <li class="\&quot;infowindow\&quot;">Players ({members_amount}):
+          {members}</li> </ul>'
+        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
+          style="color: {land_color};">Spawnpoint</span></span></div> <div class="\&quot;infowindow\&quot;"><br
+          />Open to visitors: {public}</div> <ul> <li>If this spawn is open to visitors,
+          anyone can teleport to it by executing /lands spawn {land}.</li> </ul>'
+      nation:
+        description: '<div class="\&quot;infowindow\&quot;"><span style="font-size:
+          200%;"><span style="color: {land_color};">{land}</span><br /></span>{title}</div>
+          <ul> <li class="\&quot;infowindow\&quot;">Level: {level}</li> <li class="\&quot;infowindow\&quot;">Chunks:
+          {chunks}</li> <li class="\&quot;infowindow\&quot;">Players ({members_amount}):
+          {members}</li> </ul> <p><strong>This land belongs to nation {nation}:</strong></p>
+          <ul> <li>Level: {level_nation}</li> <li>Capital: {capital}</li> <li>Lands
+          (total players: {members_amount_nation}): {lands}</li> </ul>'
+      capital:
+        spawn: '<div class="\&quot;infowindow\&quot;"><span style="font-size: 200%;"><span
+          style="color: {land_color};">Capitals Spawnpoint</span><br /></span>This
+          spawn belongs to the capital of nation {nation}.</div><div class="\&quot;infowindow\&quot;"><br
+          />Open to visitors: {public}</div><ul><li>If this spawn is open to visitors,
+          anyone can teleport to it by executing /lands spawn {land}.</li></ul>'
+  
+  sign:
+    top:
+      entry:
+        '1': '&6&l#{pos} {object}'
+        '2': '&7{owner}에 의함'
+        '3': '&7{sorting}:'
+        '4': '&3{value}'
+      none:
+        line-1: ''
+        line-2: '&c없음'
+        line-3: ''
+        line-4: ''
+    rent:
+      line-2: '&6{area} 임대'
+      line-3: '&c{cost} &8/ &5{time}'
+      line-4: '&8최대: {max}'
+    sell:
+      area:
+        line-2: '&a구매'
+        line-3: '&7영역&6 {area}'
+        line-4: '&c{cost}'
+      land:
+        line-2: '&a구매'
+        line-3: '&7영토&2 {land}'
+        line-4: '&c{cost}'
+    rented:
+      line-2: '&7영역&6 {area}'
+      line-3: '&7{player}'
+      line-4: '&5{time} &7남음'
+    sold:
+      area:
+        line-2: '&7영역&6 {area}'
+        line-3: '&7해당 플레이에어에게 &a판매됨'
+        line-4: '&7{player}'
+      land:
+        line-2: '&7영토&2 {land}'
+        line-3: '&7해당 플레이에어에게 &a판매됨'
+        line-4: '&7{player}'
+  map:
+    wilderness: '&2▉ '
+    yours: '&a▉ '
+    trusted: '&e▉ '
+    others: '&c▉ '
+    position: '&9▉ '
+    info:
+      wilderness: ' &2▉ &7= 황야'
+      yours: ' &a▉ &7= 나의 것'
+      trusted: ' &e▉ &7= 인가됨'
+      others: ' &c▉ &7= 기타'
+      position: ' &9▉ &7= 위치'
+    hover:
+      wilderness: '&7이 청크는 황야 상태입니다. 소유하려면 클릭하세요'
+      yours: '&7이 영토는 내 소유입니다. 영토에 대한 정보를 보려면 클릭하세요&3 {land}&7.'
+      trusted: '&7이 영토의 인가자로 등록 되어있습니다. 영토 정보를 보려면 클릭하세요&3 {land}&7.'
+      others: '&7이 영토의 인가자가 아닙니다. 영토 정보를 보려면 클릭하세요 &3 {land}&7.'
+      position: '&7내 현재 위치'
+  
+  inbox:
+    general:
+      created: '&7영토 {0} &7생성됨'
+    member:
+      join: '&7{0} 님이 들어왔습니다.'
+      leave: '&7{0} 님이 떠났습니다.'
+      ban: '&c{0} 님이 밴 되었습니다.'
+    economy:
+      upkeep:
+        warning: '&c유지 비용을 지불 할 수 없습니다. 유지비: {0}원'
+        unclaim: '&c영토 유지 비용이 부족합니다. 비용: {0}원. 마지막으로 점유한 {1} 청크가 강제로 점유 해제되었습니다.'
+        paid: '&7지불된 유지 비용: {0}원'
+        nation: '&7{0} 국가는 유지비 {1}원을 지불하지 못해 삭제되었습니다.'
+      bank:
+        withdraw: '&c{0} 님이 출금했습니다. {1}원. 새 잔고: ${2}'
+        deposit: '&7{0} 님이 입금했습니다. {1}원. 새 잔고: ${2}'
+      taxes:
+        warning: '&c{0} 님이 세금을 내지 못했습니다.'
+        untrusted: '&c{0} 님이 세금을 내지 못하여 비인가자 상태로 변경되었습니다.'
+        received: '&7영토 주민으로부터 총 {0}원 세금을 징수했습니다. 새 잔고: {1}원'
+    war:
+      shield: '&7{0}에 대한 추가 전쟁 방어 시간을 받았습니다. 총합: {1}'
+      start: '&7{0}와의 전쟁이 시작됩니다. 타임아웃:&5 {1}'
+      declaration:
+        sent: '&7{0}에 전쟁을 선언했습니다. 전쟁은&5 {1}&7에 시작됩니다.'
+        received: '&c{0} &c이 전쟁을 선포했습니다. &7전쟁은&5 {1}&7에 시작됩니다.'
+        mutual:
+          sent: '&7{0}에게 전쟁 요청을 보냈습니다. &7수락을 기다리세요.'
+          received: '&c{0} &c이 전쟁 요청을 보냈습니다. 수락: &e/wars declare {1}'
+      surrender:
+        sent: '&c전쟁에서 항복했습니다. 적에게 {0} 를 약탈당했습니다.'
+        received: '&7적 {0} &7이 항복했습니다. {1} 를 약탈했습니다.'
+      end:
+        won: '&7우리는 적국 {0}를 상대로 하여 &3 {1} &7포인트로 전쟁에서 승리하였습니다. &7그들은 오직&3 {2} &7포인트입니다.
+          전쟁에서 &5{3}&7를 얻었습니다.'
+        draw: '&7{0} 와의 전쟁이 &3 {1} &7포인트로 무승부로 끝났습니다.'
+        lost: '&7우리는 적국 {0}를 상대로 하여 &3 {1} &7포인트로 전쟁에서 패배하였습니다. &7그들은&3 {2} &7포인트입니다.
+          전쟁에서 &5{3}&7를 얻었습니다.'
+    nation:
+      general:
+        created: '&7국가 {0} &7생성됨.'
+      member:
+        join: '&7영토 {0} 가입.'
+        leave: '&7영토 {0} 탈퇴.'
+      economy:
+        upkeep:
+          warning: '&c{0}의 유지 비용을 지불하지 않았습니다.'
+          paid: '&7유지비 지불: - {0}'
+        taxes:
+          warning: '&c영토 {0} 가 세금을 지불하지 않았습니다.'
+          untrusted: '&c영토 {0} 가 세금을 지불하지 않았습니다. 그들은 내보내집니다.'
+          received: '&7총 {0} 의 세금을 영토들로부터 받았습니다. 새 잔고: {1}'
+    relation:
+      ally:
+        offer: '&7{0} &7는 우리와 동맹국이 되고싶어합니다.'
+        accepted: '&7우리는 지금부터 {0}와 동맹입니다.'
+        remove: '&7우리는 {0}와 더이상 동맹이 아닙니다.'
+      enemy:
+        add: '&7우리는 지금부터 {0}와 적입니다.'
+        offer: '&7{0} &7는 우리와 중립적인 관계가 되고싶어합니다.'
+        accepted: '&7우리는 {0}와 더이상 적이 아닙니다.'
+  
+  wars:
+    object:
+      enemy: '&적국'
+      ally: '&a동맹국'
+    nametag:
+      enemy: '&c적국 &8| '
+      ally: '&a동맹국 &8| '
+    state:
+      preparation: '&a준비'
+      fight: '&c전투'
+
+
+# /<cmd> help
+help:
+  help:
+    root:
+      header: '[NoPrefix][T]&7&l&m━━&e&l<<<<&7&l&m━[H]&7이전 페이지로 이동하려면 여기를 클릭하세요.[/H][C]{cmd}
+        {previous}[/C][/T] &2영토 명령어 &7페이지&3 {page} &8/&3 {pages} [T]&7&l&m━&e&l>>>>&7&l&m━━[H]&7다음
+        페이지로 이동하려면 여기를 클릭하세요.[/H][C]{cmd} {next}[/C][/T]'
+      footer: |
+        [NoPrefix]
+        &7탐색하려면 아래 화살표를 클릭하세요.
+        [T]&7&l&m━━&e&l<<<<&7&l&m━[H]&7이전 페이지로 이동하려면 여기를 클릭하세요.[/H][C]{cmd} {previous}[/C][/T] &2영토 명령어 &7페이지&3 {page} &8/&3 {pages} [T]&7&l&m━&e&l>>>>&7&l&m━━[H]&7다음 페이지로 이동하려면 여기를 클릭하세요.[/H][C]{cmd} {next}[/C][/T]
+    sub:
+      unknown: |
+        &c보조 명령어&4 {command} &c가 존재하지 않습니다.
+          [T]&7✖ 명령어 보기: &3/{cmd} &8[CLICK][H]&7사용 가능한 명령 목록을 보려면 여기를 클릭하세요.[/H][C]{cmd}[/C][/T]
+      header: '[NoPrefix][T]&7&l&m━━━━━&e&l<<<<&7&l&m━[H]&7이전 페이지로 이동하려면 여기를 클릭하세요.[/H][C]{cmd}
+        {previous}[/C][/T] &2보조 명령어 &7페이지&3 {page} &8/&3 {pages} [T]&7&l&m━&e&l>>>>&7&l&m━━━━━[H]&7다음
+        페이지로 이동하려면 여기를 클릭하세요.[/H][C]{cmd} {next}[/C][/T]'
+      footer: |
+        [NoPrefix]
+        &7탐색하려면 아래 화살표를 클릭하세요.
+        [T]&7&l&m━━━━━&e&l<<<<&7&l&m━[H]&7이전 페이지로 이동하려면 여기를 클릭하세요.[/H][C]{cmd} {previous}[/C][/T] &2보조 명령어 &7페이지&3 {page} &8/&3 {pages} [T]&7&l&m━&e&l>>>>&7&l&m━━━━━[H]&7다음 페이지로 이동하려면 여기를 클릭하세요.[/H][C]{cmd} {next}[/C][/T]
+  command:
+    # /lands
+    lands:
+      help: '[T]&e{parent} {subcmd} {args} - &7도움말[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      edit: '[T]&e{parent} {subcmd} {args} &8- &7영토 편집 모드 시작[H]&7영토 편집은 /lands claim과
+        같은 명령어가 사용됩니다. &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      confirmtp: '[T]&e{parent} {subcmd} &8- &7불안전한 순간이동 목적지 확인[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      claim:
+        main: '[T]&e{parent} {subcmd} {args} &8- &7청크 점유(s)[H]&7다른 기법 &8(&e/selection&7,
+          fill, auto, radius&8) &7를 사용한 점유. &7실행하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        auto: '[T]&e{parent} {subcmd} &8- &7이동 중 점유[H]&7이동 중에 입력한 모든 청크가 점유됩니다. 실행하려면
+          클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        fill: '[T]&e{parent} {subcmd} &8- &7모양 내부의 청크 점유[H]&7모양 내부의 모든 청크를 채워 점유합니다.
+          &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        radius: '[T]&e{parent} {subcmd} {args} &8- &7반경 내 점유[H]&7지정된 반지름의 모든 청크를 점유합니다.
+          &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      
+      create: '[T]&e{parent} {subcmd} {args} &8- &7영토 생성[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      createcamp: '[T]&e{parent} {subcmd} {args} &8- &7캠프 생성[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      merge: '[T]&e{parent} {subcmd} {args} &8- &7현재 영토에 병합[H] &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      leave: '[T]&e{parent} {subcmd} {args} &8- &7영역/영토 떠나기[H]&7만약 영토를 특정하지 않으면, 현재
+        위치에서 그 영역을 떠날 것입니다. &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      unclaim:
+        main: '[T]&e{parent} {subcmd} &8- &7청크 점유 해제[H]&7또한 이는 &e/lands selection&7
+          을 지원합니다. &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        auto: '[T]&e{parent} {subcmd} &8- &7이동 중 점유 해제[H]&7이동하는 동안 입력한 모든 청크가 점유 해제됩니다.
+          &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      unclaimall: '[T]&e{parent} {subcmd} &8- &7모든 청크 점유 해제[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      delete: '[T]&e{parent} delete {args} &8- &7영토 삭제[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      trust: '[T]&e{parent} {subcmd} {args} &8- &7플레이어 인가[H]&7플레이어를 모든 영토에 인가하려면 *을
+        영역 이름으로 사용하세요. &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      untrust: '[T]&e{parent} {subcmd} {args} &8- &7플레이어 불인가[H]&7플레이어를 모든 영토에서 불인가하려면
+        *을 영역 이름으로 사용하세요. &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      setRole: '[T]&e{parent} {subcmd} {args} &8- &7역할 설정[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      accept: '[T]&e{parent} {subcmd} {args} &8- &7초대 수락[H]&7/lands invites 를 실행함으로써
+        받은 모든 초대를 볼 수 있습니다. &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      deny: '[T]&e{parent} {subcmd} {args} &8- &7초대 거부[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      view:
+        main: '[T]&e{parent} {subcmd} {args} &8- &7점유 정보[H]&7이 명령어는 주변 점유 정보를 보여줍니다.
+          &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        disable: '[T]&e{parent} {subcmd} &8- &7시각화 사용 안함[H]&7&e/lands view &7 시각화를
+          사용하지 않습니다. &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        here: '[T]&e{parent} {subcmd} &8- &7하위 영역 시각화[H]&7현재 서있는 곳의 하위 영역을 시각화합니다.
+          &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        stay: '[T]&e{parent} {subcmd} &8- &7y 좌표 잠금[H]&7시각화는 더이상 높이를 따르지 않습니다. &7실행하려면
+          클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      
+      menu: '[T]&e{parent} {subcmd} {args} &8- &7메뉴 열기[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      setSpawn: '[T]&e{parent} {subcmd} &8- &7영토 스폰 설정[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      spawn: '[T]&e{parent} {subcmd} {args} &8- &7영토로 순간이동[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      wild: '[T]&e{parent} {subcmd} {args} &8- &7랜덤한 위치로 순간이동[H] &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      top: '[T]&e{parent} {subcmd} &8- &7상위 영토 보이기[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      selection:
+        main: '[T]&e{parent} {subcmd} {args} &8- &7선택 모드[H]&7이 명령어를 사용하여 하위 영역의 크기를
+          조정하거나 선택 영역을 무한 y 좌표 레벨로 확장할 수 있습니다. &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        assign: '[T]&e{parent} {subcmd} {args} &8- &7하위 영역 크기 조정[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        expand: '[T]&e{parent} {subcmd} &8- &7상하 확장[H] &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      chat: '[T]&e{parent} {subcmd} {args} &8- &7영토 채팅[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      rename: '[T]&e{parent} {subcmd} {args} &8- &7영토 이름 변경[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      teleport: '[T]&e{parent} {subcmd} {args} &8- &7청크로 순간이동[H] &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      invites: '[T]&e{parent} {subcmd} &8- &7받은 초대 보기[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      info: '[T]&e{parent} {subcmd} {args} &8- &7영토 정보 보기[H] &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      player: '[T]&e{parent} {subcmd} {args} &8- &7플레이어 정보 보기[H] &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      map: '[T]&e{parent} {subcmd} &8- &7View map[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      balance: '[T]&e{parent} {subcmd} {args} &8- &7잔고 확인[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      deposit: '[T]&e{parent} {subcmd} {args} &8- &7돈 예금[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      withdraw: '[T]&e{parent} {subcmd} {args} &8- &7돈 인출[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      list: '[T]&e{parent} {subcmd} {args} &8- &7모든 영토 나열[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      assign: '[T]&e{parent} {subcmd} {args} &8- &7영역에 선택 항목 할당[H] &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      setowner: '[T]&e{parent} {subcmd} {args} &8- &7소유권 이전[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      ban: '[T]&e{parent} {subcmd} {args} &8- &7플레이어 밴[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      unban: '[T]&e{parent} {subcmd} {args} &8- &7플레이어 밴 해제[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      taxes: '[T]&e{parent} {subcmd} &8- &7납부할 세금 표시[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      upkeep: '[T]&e{parent} {subcmd} &8- &7지불할 유지 보수 비용 표시[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      unstuck: '[T]&e{parent} {subcmd} &8- &7트랩으로부터 순간이동[H]&7땅에 갇혔을 경우와 같은 때를 대비합니다.
+        &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      claimlist: '[T]&e{parent} {subcmd} {args} &8- &7영토에 대한 점유 목록[H]&7이 명령어를 실행하면
+        해당 영토의 모든 /lands claim 이 표시됩니다. &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      rent:
+        main: '[T]&e{parent} {subcmd} {args} &8- &7임대 관리[H]&7현재 위치에서 임대 영역을 관리합니다.
+          &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        cancel: '[T]&e{parent} {subcmd} &8- &7임대 취소[H]&7현재 위치에서 하위 영역 대여를 취소합니다. &7실행하려면
+          클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        info: '[T]&e{parent} {subcmd} &8- &7정보 보기[H]&7현재 위치에서 하위 영역 대여에 대한 정보를 표시합니다.
+          &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        list: '[T]&e{parent} {subcmd} &8- &7모든 임대 제의 보기[H]&7영토에 대한 모든 임대 제의를 보여줍니다.
+          &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        remove:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7현재 임대 관리[H]&7현재 위치에서 임대 영역을 관리합니다.
+            &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          offer: '[T]&e{parent} {subcmd} &8- &7제의 제거[H]&7플레이어들은 임대 기간을 연장할 수 없을 것입니다.
+            &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+          tenant: '[T]&e{parent} {subcmd} &8- &7임차인 제거[H]&7보상금을 지급하여 현재 임차인을 제거합니다.
+            &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      level: '[T]&e{parent} {subcmd} &8- &7레벨 진행 상황 보기[H]&7다음 레벨 잠금 해제의 진행 상황과 현재
+        레벨과 다음 레벨의 장점을 확인합니다. &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      relations:
+        main: '[T]&e{parent} {subcmd} {args} &8- &7관계 관리[H]&7영토와 국가를 동맹국 혹은 적국으로 추가합니다.
+          &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        allies:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7동맹국 관리[H]&7영토와 국가를 동맹국으로 추가합니다.
+            &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          add: '[T]&e{parent} {subcmd} {args} &8- &7동맹국 추가[H]&7영토 혹은 국가를 동맹국으로 추가합니다.
+            &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          remove: '[T]&e{parent} {subcmd} {args} &8- &7동맹국 제거[H]&7동맹국 관계를 끝냅니다. &7복사하려면
+            클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        enemies:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7적국 관리[H]&7영토와 국가를 적국으로 추가합니다.
+            &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          add: '[T]&e{parent} {subcmd} {args} &8- &7적국 추가[H]&7영토 혹은 국가를 적국으로 선언합니다.
+            &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          remove: '[T]&e{parent} {subcmd} {args} &8- &7적국 제거[H]&7적국에게 중화 제안을 보냅니다.
+            &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      
+      # Admin Commands: /lands admin
+      admin:
+        main: '[T]&e{parent} {subcmd} {args} &8- &7관리자 명령어[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        listperms: '[T]&e{parent} {subcmd} {args} &8- &7플레이어가 가지고 있는 권한 목록 [H]&7복사하려면
+          클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        debug: '[T]&e{parent} {subcmd} &8- &7로드 데이터 통계 표시[H] &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        reload: '[T]&e{parent} {subcmd} &8- &7config와 메세지 다시 로드[H] &7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        about: '[T]&e{parent} {subcmd} &8- &7영토 정보 보기[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        chatspy: '[T]&e{parent} {subcmd} {args} &8- &7채팅 듣기[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        dismiss: '[T]&e{parent} {subcmd} {args} &8- &7노트 해제[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        import: '[T]&e{parent} {subcmd} {args} &8- &7타사로부터 점유 가져오기[H] &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        menu: '[T]&e{parent} {subcmd} {args} &8- &7관리자 메뉴 열기[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        migratedb: '[T]&e{parent} {subcmd} {args} &8- &7데이터베이스 옮김[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        player:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7특별 플레이어 관리[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          menu: '[T]&e{parent} {subcmd} &8- &7플레이어의 메뉴 열기[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          delete: '[T]&e{parent} {subcmd} &8- &7플레이어와 플레이어의 영토 삭제[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        
+        resetworld: '[T]&e{parent} {subcmd} {args} &8- &7월드의 모든 점유 삭제[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        give:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7플레이어에게 제공[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          camp: '[T]&e{parent} {subcmd} {args} &8- &7캠프 아이템 제공[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          captureblock: '[T]&e{parent} {subcmd} {args} &8- &7캡쳐 블록 제공[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          claimblock: '[T]&e{parent} {subcmd} {args} &8- &7점유 블록 제공[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          permission:
+            main: '[T]&e{parent} {subcmd} {args} &8- &7numbered permissions 수정[H]
+              &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+            chunks: '[T]&e{parent} {subcmd} {args} &8- &7최대 청크 수정[H] &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+            chunks-support: '[T]&e{parent} {subcmd} {args} &8- &7지원 청크 수정[H] &7복사하려면
+              클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+            lands: '[T]&e{parent} {subcmd} {args} &8- &7최대 영토 멤버 수 수정[H] &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+            members: '[T]&e{parent} {subcmd} {args} &8- &7최대 멤버 수 수정[H] &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+            ownlands: '[T]&e{parent} {subcmd} {args} &8- &7최대 소유 영토 수정[H] &7복사하려면
+              클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        hologram:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7leaderboard holograms 관리[H] &7복사하려면
+            클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          create: '[T]&e{parent} {subcmd} {args} &8- &7홀로그램 생성[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          delete: '[T]&e{parent} {subcmd} &8- &7근처 홀로그램 삭제[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+          list: '[T]&e{parent} {subcmd} &8- &7홀로그램 나열[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+        land:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7특별 영토 관리[H] &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          setflag: '[T]&e{parent} {subcmd} {args} &8- &7권한 상태 설정[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          resetflag: '[T]&e{parent} {subcmd} {args} &8- &7권한 상태를 roles.yml로 재설정[H]
+            &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          menu: '[T]&e{parent} {subcmd} &8- &7영토 메뉴 열기[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+          bank:
+            main: '[T]&e{parent} {subcmd} &8- &7은행 잔고 편집[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+            modify: '[T]&e{parent} {subcmd} {args} &8- &7자금 추가 (+) 혹은 제거 (-)[H] &7복사하려면
+              클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+            set: '[T]&e{parent} {subcmd} {args} &8- &7자금 설정[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          shield:
+            main: '[T]&e{parent} {subcmd} &8- &7방어 시간 편집[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+            modify: '[T]&e{parent} {subcmd} {args} &8- &7시간 추가 (+) 혹은 제거 (-)[H] &7복사하려면
+              클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+            set: '[T]&e{parent} {subcmd} {args} &8- &7시간 설정[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+    
+    # /wars
+    wars:
+      declare: '[T]&e{parent} {subcmd} {args} - &7전쟁 선언[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      info: '[T]&e{parent} {subcmd} &8- &7현재 또는 다가오는 전쟁 표시[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      menu: '[T]&e{parent} {subcmd} {args} &8- &7전쟁 메뉴 열기[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      deny: '[T]&e{parent} {subcmd} &8- &7상호 전쟁 선전포고 거부[H]&7실행하려면 클릭하세요[/H][C]{fullcmd}[/C][/T]'
+      spawn: '[T]&e{parent} {subcmd} &8- &7적국으로 순간이동[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      
+      # Admin Commands: /wars admin
+      admin:
+        main: '[T]&e{parent} {subcmd} {args} &8- &7특별 전쟁 관리[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        start: '[T]&e{parent} {subcmd} {args} &8- &7전쟁 시작[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        end: '[T]&e{parent} {subcmd} {args} &8- &7전쟁 종료[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+    
+    # /nations
+    nations:
+      chat: '[T]&e{parent} {subcmd} {args} &8- &7국가 채팅[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      trust: '[T]&e{parent} {subcmd} {args} &8- &7영토 초대[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      untrust: '[T]&e{parent} {subcmd} {args} &8- &7영토 제거[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      accept: '[T]&e{parent} {subcmd} {args} &8- &7초대 수락[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      deny: '[T]&e{parent} {subcmd} {args} &8- &7초대 거부[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      menu: '[T]&e{parent} {subcmd} {args} &8- &7메뉴[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      create: '[T]&e{parent} {subcmd} {args} &8- &7국가 생성[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      delete: '[T]&e{parent} {subcmd} &8- &7국가 삭제[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      leave: '[T]&e{parent} {subcmd} &8- &7국가 떠나기[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      spawn: '[T]&e{parent} {subcmd} &8- &7수도 스폰[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      rename: '[T]&e{parent} {subcmd} &8- &7국가 이름 변경[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      setcapital: '[T]&e{parent} {subcmd} {args} &8- &7수도 설정[H]&7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+      level: '[T]&e{parent} {subcmd} &8- &7레벨 진행 상황 보기[H]&7다음 레벨 잠금 해제의 진행 상황과 현재
+        레벨과 다음 레벨의 장점을 확인합니다.&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      info: '[T]&e{parent} {subcmd} {args} &8- &7국가 정보 보기[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      list: '[T]&e{parent} {subcmd} {args} &8- &7모든 국가 목록[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      top: '[T]&e{parent} {subcmd} &8- &7상위 국가 표시[H]&7실행하려면 클릭하세요.[/H][C]{fullcmd}[/C][/T]'
+      relations:
+        main: '[T]&e{parent} {subcmd} {args} &8- &7관계 관리[H]&7영토 혹은 국가를 동맹국 혹은 적국으로
+          추가합니다. &7복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        allies:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7동맹국 관리[H]&7영토 혹은 국가를 동맹국으로 추가합니다.
+            복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          add: '[T]&e{parent} {subcmd} {args} &8- &7동맹국 추가[H]&7영토 혹은 국가를 동맹국으로 추가합니다.
+            복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          remove: '[T]&e{parent} {subcmd} {args} &8- &7동맹국 제거[H]&7동맹국과의 관계를 종료합니다.
+            복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+        enemies:
+          main: '[T]&e{parent} {subcmd} {args} &8- &7적국 관리[H]&7영토 혹은 국가를 적국으로 추가합니다.
+            복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          add: '[T]&e{parent} {subcmd} {args} &8- &7적국 추가[H]&7영토 혹은 국가를 적국으로 선언합니다.
+            복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+          remove: '[T]&e{parent} {subcmd} {args} &8- &7적국 제거[H]&7적국에게 중화 제안을 보냅니다.
+            복사하려면 클릭하세요.[/H][SC]{fullcmd}[/SC][/T]'
+
+# /lands
+lands:
+  message:
+    feature-disabled: '&c관리자가 이 기능을 사용할 수 없도록 설정했습니다. &8그들은 이 기능을 사용하게 하려면 config에서
+      setting 설정을 활성화해야만 합니다.'
+    current-war: '&c지금 이 행동을 할 수 없습니다. &7영토 &2 {land} &7는 현재 {object}&7 를 상대로 전쟁 중입니다.
+      &7전쟁이 끝나면 다시 시도해주세요.'
+    combat:
+      tag: '#b#[config]color:purple,style:solid[/config]&7Combat tag:&5 {time}'
+    flags:
+      block_place: '&c이곳에 블록을 설치할 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c). &8Flag:
+        {flag}'
+      block_break: '&c이곳의 블록을 부술 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c). &8Flag:
+        {flag}'
+      block_ignite: '&c이곳의 블록에 불을 붙일 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+        &8Flag: {flag}'
+      interact_general: '&c이곳에서는 상호작용할 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+        &8Flag: {flag}'
+      interact_door: '&c이곳에서는 문을 열 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+        &8Flag: {flag}'
+      interact_mechanism: '&c이곳에서는 메커니즘을 사용할 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+        &8Flag: {flag}'
+      interact_container: '&c이곳에서는 상자를 열 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+        &8Flag: {flag}'
+      interact_villager: '&c이곳에서는 주민과 교류할 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+        &8Flag: {flag}'
+      fly: '&c이곳에서는 날 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c). &8Flag: {flag}'
+      spawn_teleport: '&c영토 &4 {land}&c 의 스폰으로의 순간이동을 할 수 없습니다. &7관리자는 당신을 위해 그들의
+        스폰으로 순간이동할 수 있도록 역할 설정을 조정할 수 있습니다. for you. &8Flag: {flag}'
+      land_enter: '&c이 영토&4 {land}&c의 영역&4 {area} &c에 들어갈 수 없습니다. (&cArea:&4 {area}
+        &cLand:&4 {land}&c). &7당신은 이전 위치로 이동됩니다. &8Flag: {flag}'
+      vehicle_use: '&c이곳에서 탈것을 탈 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c). &8Flag:
+        {flag}'
+      item_pickup: '&c이곳에서 아이템을 떨어뜨리고 주울 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+        &8Flag: {flag}'
+      ender_pearl: '&c이 아이템을 사용하여 해당 영역으로 순간이동할 수 없습니다.&6 {area} &cof land&4 {land}&c.
+        &8Flag: {flag}'
+      attack_animal: '&c이곳에서 동물을 공격할 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+        &8Flag: {flag}'
+      attack_monster: '&c이곳에서 몬스터를 공격할 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+        &7그들 또한 당신을 공격할 수 없습니다. &8Flag: {flag}'
+    noaccess:
+      wilderness: '&c해당 행동을 황야에서 할 수 없습니다. &8Flag: {flag}'
+      area: '&c해당 행동을 이 영역에서 할 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c). &8Flag:
+        {flag}'
+      banned: '&c영역에 들어갈 수 없습니다. &7영역으로부터 맨당하였습니다. &8(&7Area:&6 {area} &7Land:&2 {land}&8)&7.'
+      claimblock: '&c점유 블록을 소유할 수 없습니다. &7그것은 &3 {player}&7의 것 입니다.'
+      combat:
+        attacker: '&c이곳에서 플레이어를 공격할 수 없습니다. &7이 영역은 영토 &2 {land}&7에 속합니다.'
+        target: '&c당신의 타겟은 이곳에서 플레이어를 공격할 수 없습니다. &7이곳에서 그들과 싸울 수 없습니다. &7이 영역은 영토
+          &2 {land}&7에 속합니다.'
+        ally: '&c해당 플레이어가 당신 영토의 멤버이기 때문에, 황야에서 이 플레이어를 공격할 수 없습니다.s, &7Arena fights
+          는 역할 설정에서 pvp를 허용함으로써 당신의 영토에서 이루어질 수 있습니다.'
+        wilderness: '&c해당 플레이어가 황야에 있고 당신이 점유된 영토에 있기 때문에, 해당 플레이어를 공격할 수 없습니다.'
+    area:
+      exists: '&c이름이 &4 {area} &c인 영역은 이미 영토&4 {land}&c에 존재합니다.'
+      not-exist: '&c영역 &4 {area} &c는 영토&4 {land}&c에 존재하지 않습니다.'
+      default: '&c영토 &4 {land}&c의 기본 영역인 &4 {area} &c에서는 해당 행동을 할 수 없습니다.'
+    event:
+      fly:
+        counter: '#t#&6&3{sec} &7초 동안 Fly-Mode 비활성화[newline]'
+        disabled: '&c날기 모드가 비활성화되었습니다. &7날 수 없습니다. here.'
+      elytra:
+        counter: '#t#&6&3{sec} &7초 동안 겉날개 비활성화 [newline]'
+        disabled: '&c겉날개 글라이딩이 비활성화되었습니다. &7이곳에서 겉날개를 사용할 수 없습니다.'
+      enter:
+        land: '#t#&2&l{land}[newline]&3{title}'
+        camp: '#t#&2&l{land}[newline]&3{title}'
+        admin: '#t#&2&l{land}[newline]{title}'
+        pvp-warning: '#a#&cpvp zone에 입성하였습니다.'
+      leave:
+        land: '#t#&2&l황야[newline]&7야생을 느껴라'
+        camp: '#t#&2&l황야[newline]&7야생을 느껴라'
+        admin: '#t#&2&l황야[newline]&7야생을 느껴라'
+      level:
+        up: '#t#&6{object}[newline]&7레벨 업: {level}'
+        down: '#t#&6{object}[newline]&7레벨 내려감: {level}'
+      inbox: '&e받은 편지함 &8- {object}&8: {message}'
+    teleportation:
+      already: '&c두 번째 순간이동을 시작할 수 없습니다. 이미 순간이동이 진행 중입니다. &7완료될 때까지 기다려주세요.'
+      started: '&7순간이동 작업이 시작되었습니다. &5 {sec} 초&7 안에 순간이동합니다. 움직이지 마세요.'
+      cmd: '&c순간이동 중에 어떤 명령어도 사용할 수 없습니다. &7순간이동이 끝날떼 까지 &5{sec} 초 기다려주세요.'
+      progress: '#b#[config]color:purple,style:solid[/config]&7순간이동까지 &5 {time} &7초(s)
+        기다리세요.'
+      cancelled: '&c순간이동이 취소되었습니다. &7순간이동을 기다리는 &5 {sec} &7초 동안 움직이지 마세요.'
+      chunk: '#t#&6순간이동함[newline]&7X: {x} Z: {z} 가격:&c {cost}'
+      plugin: '&c타사 플러그인에 의해 순간이동이 취소되었습니다. &7다른 플러그인을 체크해보세요. &7이것은 영토의 문제가 아닙니다.'
+      unsafe: |
+        &7목적지가 안전하지 않기 때문에, 순간이동이 취소되었습니다.
+          [T]&2✔ 어쨌든 순간이동하기: &8[CLICK][H]&7경고: 순간이동 목적지가 안전하지 않고 당신에게 위험할 수 있습니다.[/H][C]{cmd}[/C][/T]
+      corrected: '&7기존의 순간이동 목적지는 안전하지 않았습니다. &7최종 목적지가 안전한 위치로 수정되었습니다.'
+    claimblock:
+      dropped: '&c일부 점유 블록이 땅에 놓여있습니다. &7인벤토리에 남은 공간이 없습니다.'
+      success: '&7&3 {blocks} &7개의 점유 블록을 얻었습니다. &7청크에 그것들을 놓아 점유하세요.'
+    capture:
+      dropped: '&c일부 캡쳐 블록이 땅에 놓여있습니다. &7인벤토리에 남은 공간이 없습니다.'
+      success: '&7&3 {blocks} &7개의 캡쳐 블록을 얻었습니다. &7전쟁 중 적의 점유지에 배치하여 지역을 점령하세요.'
+    camp:
+      dropped: '&c일부 캠프 아이템이 땅에 놓여있습니다. &7인벤토리에 남은 공간이 없습니다.'
+      success: '&7&3 {blocks} &7개의 캠프 아이템을 얻었습니다. &7해당 위치에 캠프를 생성할 수 있도록 아이템을 배치하세요.'
+    blacklist:
+      untrusted: '&c이곳에서 해당 명령어를 사용할 수 없습니다. &7영토&2 {land}&7의 영역 &6 {area} &7에서 인가되지
+        않았습니다. &8Bypass permission: {permission}'
+      general: '&c점유된 영토에서 해당 명령어를 사용할 수 없습니다. &8Bypass permission: {permission}'
+      war: '&c전쟁에 참여하는 동안 해당 명령어를 사용할 수 없습니다. &8Bypass permission: {permission}'
+    auto-action:
+      started:
+        claim: '#t#&6자동 점유[newline]&7청크를 점유하려면 계속 걸어가세요.'
+        unclaim: '#t#&6자동 점유 해제[newline]&7청크를 점유 해제하려면 계속 걸어가세요.'
+      stopped:
+        claim: '#t#&6자동 점유[newline]&c멈춤'
+        unclaim: '#t#&6자동 점유 해제[newline]&c멈춤'
+    role:
+      exists: '&4 {role} &c 이름의 역할은 이미 존재합니다. &7다른 이름을 선택하세요.'
+      not-exist: '&c&4 {role} &c이름의 역할은 &4{land}&c 영토의 &4{area} &c영역에 존재하지 않습니다. &7오타인지
+        확인하세요.'
+      max: '&c해당 영토에서 더이상의 역할을 생성할 수 없습니다. &7최대 역할 수 &3 {max} &7 제한에 도달했습니다. Permission:
+        lands.roles.<number>'
+      player:
+        land: '&c&4 {land}&c영토의 플레이어를 편집할 수 없습니다. &7그들의 역할 &6{role} &7 우선 순위가 당신의
+          역할보다 높거나 같습니다.'
+        area: '&c이 영역의 플레이어를 편집할 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c). &7그들의
+          역할 &6{role} &7 우선 순위가 당신의 역할보다 높거나 같습니다.'
+      weight:
+        land: '&c영토 &4 {land}&c의 역할 &4 {role} &c을 편집할 수 없습니다. &7해당 역할이 당신의 역할보다 높거나
+          같습니다.'
+        area: '&c이 영토의 역할 &4 {role} &c을 편집할 수 없습니다. (&cArea:&4 {area} &cLand:&4 {land}&c).
+          &7해당 역할이 당신의 역할보다 높거나 같습니다.'
+      delete:
+        role: '&c역할 &4 {role}&c을 삭제할 수 없습니다. &7이 역할은 필수입니다.'
+        entry: '&c항목 역할&4 {role}&c을 삭제할 수 없습니다. &7이 역할은 새로운 플레이어에게 필요합니다.'
+        visitor: '&c방문자의 역할 &4 {role}&c을 삭제할 수 없습니다. &7이 역할은 방문자에게 필요합니다.'
+    
+    chat-input:
+      player: '#t#&6채팅에[newline]&7플레이어의 이름을 입력하세요.[newline] &7중단하려면 "취소" 를 입력하세요.'
+      object: '#t#&6채팅에 영토 혹은 국가의 [newline]&7이름을 입력하세요.[newline] &7중단하려면 "취소" 를 입력하세요.'
+      land: '#t#&6채팅에 목표 영토의 [newline]&7이름을 입력하세요.[newline] &7중단하려면 "취소" 를 입력하세요.'
+      title: '#t#&6채잉에 이 영토의 [newline]&7새로운 이름을 입력하세요.[newline] &7중단하려면 "취소" 를 입력하세요.'
+      rename: '#t#&6채팅에[newline]&7새로운 이름을 입력하세요.[newline]&7띄어쓰기는 허용되지 않습니다. 중단하려면
+        "취소" 를 입력하세요.'
+      name: '#t#&6채팅에[newline]&7새로운 이름을 입력하세요.[newline]&7중단하려면 "취소" 를 입력하세요.'
+  command:
+    menu:
+      invalid: '&4 {shortcut}&c 라는 이름이 있는 바로 가기는 없습니다.'
+    rent:
+      own: '&c자신의 제안을 임대하거나 구매할 수 없습니다. &7제안을 취소하려면 서명을 철회하거나 shift + 홀로그램을 클릭하세요.'
+      edit: '&c이 영역은 &3{player}&7 에게 임대/판매 되었기 때문에, 당신은 현재 영토 &4 {land}&7의 영역 &4 {area}
+        &c을 편집할 수 없습니다.'
+      tenant: '&c해당 영역을 임대할 수 없습니다. &7당신은 영토 &2 {land} &7의 영역 &6 {area}&7을 임대하지 않았습니다.'
+      none: '&c현재 위치의 영토 &4 {land} &c 의 영역 &4 {area} &c은 누구도 임대하거나 구입하지 않습니다.'
+      status: '&c현재 위치의 영토 &4 {land} &c 의 영역 &4 {area} &c이 임대 또는 판매용으로 설정되지 않았습니다.'
+      sign: |
+        &7기호 유형을 지정해야합니다. (2. line)
+         &81. line:&7 영토
+         &82. line:&3 임대 &7또는 &3판매 &8[&7영역&8]
+      set:
+        land: '&c전체 영토&4 {land} &c 를 임대 영역으로 설정할 수 없습니다. &7하위 영역을 만들어 임대용으로 설정하거나
+          완전히 판매할 수 있습니다.(second line: sell).'
+        sold: '&c이미 판매된 영역은 임대 영역으로 설정할 수 없습니다. &7영역&6{area} &7은 &3 {player}&7에게 팔렸습니다.'
+        success: |
+          &6 {area} &7을 임대 영역으로 설정합니다. 임차인은 &5 {time}&7마다 &c {cost} &7을 지불해야합니다.
+            [T]&8✖ &7제안 철회: &e/lands rent removeOffer &8[CLICK][H]&7임대 제안을 철회하려면 여기를 클릭하세요.[/H][C]lands rent removeOffer[/C][/T]
+        invalid: |
+          &7줄 형식이 잘못되었습니다. ({line}. line)
+           &81. line:&7 영토
+           &82. line:&7 임대 &8[&7영역&8]
+           &83. line:&7 시간 최대시간 (필수 아님)
+           &84. line:&7 가격 (예시: 5 = 5)
+        info: |
+          [NoPrefix]
+          &7&m━━━━━━━━━<━&r &5&l임대 영역 &7&m━>━━━━━━━━━
+          [T]&8• &7영토:&a {land} &8[&8클릭&8][H]&7영역을 시각화하려면 여기를 클릭하세요.[/H][C]lands view here[/C][/T]
+           &8• &7영역:&6 {area}
+           &8• &7가격:&7{time}마다 &c {cost}
+           &8• &8최대 시간: {max}
+          &7&m━━━━━━━━━<━&r &5&l임대 영역 &7&m━>━━━━━━━━━
+        already: '&cYou currently can''t set this area for rent again. &7The area&6
+          {area} &7is currently being rented by&3 {player}&7. It will expire in&5
+          {time}&7.'
+      rent:
+        expire: '&4 {area}&c 임대에 더 이상 시간을 추가할 수 없습니다. &7영토&2 {land} &7는 영역을 임대하기 위해
+          제거했습니다. 임대는 &5 {time}&7에 만료됩니다.'
+        max: '&cY&4 {area}&c 임대에 더 이상 시간을 추가할 수 없습니다. &7영토&2 {land} &7는 최대 총 &5 {max}
+          &7개로 구성되었습니다.'
+        add: 영역 &6{area]&7의 임대료 &c{cost}&7에 &5{add}&7를 추가했습니다. &5 {time}&7에 만료됩니다.
+        success: |
+          &7영토 &2 {land} &7의 영역 &6 {area} &7을 &c {cost}&7에 임대했습니다. 임대는&5 {time}&7에 만료됩니다.
+            &8✖ &7시간 추가: sign 또는 홀로그램 클릭
+            [T]&8✖ &7임대 취소: &e/lands rent cancel &8[CLICK][H]&7임대를 취소하려면 여기를 클릭하세요.[/H][C]lands rent cancel[/C][/T]
+        info: |
+          [NoPrefix]
+          &7&m━━━━━━━━━<━&r &5&l임대 정보 &7&m━>━━━━━━━━━
+          [T]&8• &7영토:&a {land} &8[&8클릭&8][H]&7영역을 시각화하려면 여기를 클릭하세요.[/H][C]lands view here[/C][/T]
+           &8• &7영역:&6 {area}
+           &8• &7임차인: {player}
+           &8• &7남은 시간:&5 {left}
+           &8• &8임대: {time} 마다 {cost}
+          &7&m━━━━━━━━━<━&r &5&l임대 정보 &7&m━>━━━━━━━━━
+      cancel:
+        success: '&7영역의 임대를 취소했습니다.&6 {area}&7. 영역에 더이상 접근할 수 없습니다.'
+      remove:
+        offer:
+          success:
+            land: '&7영토&2 {land} &7는 더이상 구매할 수 없습니다.'
+            area: '&2 {land}&7의 영역 &6 {area} &7은 더이상 임대되거나 구매할 수 없습니다. 기존 임차인들은 임대
+              기간이 만료될 때까지만 머물 것입니다.'
+        tenant:
+          confirm: |
+            &4 {cost} &c만큼의 비용을 임차인 &4 {player} &c에게 보상금을 지급하여 임대를 제거할 것인지 확인하세요.:
+              [T]&2✔ 확인 &8[클릭][H]&7이 작업 및 보상 지불을 확인하려면 여기를 클릭하세요.[/H][C]{cmd}[/C][/T]
+          success: '&7임차인&3 {player} &7를 영토&2 {land} &7의 영역 &6 {area} &7으로부터 제거하고,
+            &c {cost} &7만큼의 보상금을 지급하였습니다..'
+          target: '&c임차인&3 {player} &7를 영토&2 {land} &7의 영역 &6 {area} &7으로부터 제거하였습니다.
+            &7그들은 당신에게 &c {compensation} &7의 보상금을 지불했습니다.'
+    sell:
+      sell:
+        rented: '&c플레이어에게 임대중인 영역을 판매할 수 없습니다. &7영역 &6 {area} &7은 현재 &3 {player}&7에게
+          임대되었습니다. 임대는 &5 {time}&7에 만료됩니다.'
+        success:
+          area: |
+            &6 {area} &7을 판매하도록 설정했습니다. 가격:&c {cost}
+             &8✖ &7제안 제거: &e/lands rent removeOffer
+          land: |
+            &7전체 영토 &2 {land} &7을 판매하도록 설정했습니다. 가격:&c {cost}
+             &8✖ &7제안 제거: &e/lands rent removeOffer
+        invalid: |
+          &7줄 형식이 잘못되었습니다. ({line}. line)
+           &81. line:&7 영토
+           &82. line:&7 판매 &8[&7영역&8]
+           &83. line:&7 가격 (예시: 5 = 5)
+      buy:
+        success:
+          area: '&7영토&2 {land} &7의 영역 &6 {area} &7을 &c {cost}&7의 비용으로 구매했습니다.'
+          land: '&7영토&2 {land} &7를 &c {cost}&7의 비용으로 구매했습니다.'
+        info:
+          area: |
+            [NoPrefix]
+            &7&m━━━━━━━━━<━&r &5&l영역 구매 &7&m━>━━━━━━━━━
+            [T]&7영토:&a {land} &8[&8클릭&8][H]&7영역을 시각화하려면 여기를 클릭하세요.[/H][C]lands view here[/C][/T]
+             &7영역:&6 {area}
+             &7가격:&c {cost}
+            &7&m━━━━━━━━━<━&r &5&l영역 구매 &7&m━>━━━━━━━━━
+          land: |
+            [NoPrefix]
+            &7&m━━━━━━━━━<━&r &5&l영토 구매 &7&m━>━━━━━━━━━
+            [T]&7영토:&a {land} &8[&8클릭&8][H]&7영토를 시각화하려면 여기를 클릭하세요.[/H][C]lands view[/C][/T]
+            &7가격:&c {cost}
+            &7&m━━━━━━━━━<━&r &5&l영토 구매 &7&m━>━━━━━━━━━
+      sold: |
+        [NoPrefix]
+        &7---------<- &5&l판매된 영역 &7->---------
+        [T]&7영토:&a {land} &8[&8클릭&8][H]&7영역을 시각화하려면 여기를 클릭하세요.[/H][C]lands view here[/C][/T]
+         &7영역:&6 {area}
+         &3 {player} &7에게 &c {cost}&7 비용으로 판매됨.
+        &7---------<- &5&l판매된 영역 &7->---------
+    general:
+      no-permission: '&c이 작업을 수행할 권한이 없습니다. &8권한이 필요합니다.{permission}.'
+      not-exist: '&4 {object}&c의 이름을 가진 영토나 국가가 없습니다. &7오타인지 확인하세요.'
+      land-not-exist: '&c영토&2 {land} &c가 존재하지 않습니다. &7해당 이름을 가진 영토는 없습니다.'
+      area-not-exist: '&4 {land}&c에 &c영역&4 {area} &c이 존재하지 않습니다. &7영역 섹션의 영토 메뉴에서
+        새 영역을 만들 수 있습니다. &7오타인지 확인하세요.'
+      noaccess:
+        untrusted: '&4 {land}&c에 인가되지 않았습니다. &e/lands menu &7를 사용하여 당신이 멤버로 있는 영토를
+          확인할 수 있습니다.'
+        land: '&4 {land}&c에서 해당 행동을 하도록 허가받지 않았습니다. &8권한:{flag}'
+        owner: '&4 {land}&c에서 해당 행동을 하도록 허가받지 않았습니다. &7오직 영토 소유자만이 이를 할 수 있습니다. &8(/&3Lands
+          edit &8<&eland&8>)&7로 자신의 영토를 선택하거나 &8(/&3Lands create &8<&ename&8>)&7로
+          영토를 생성하세요.'
+        position:
+          flag: '&c현재 위치에서 &4 {land}&c에서 해당 행동을 하도록 허가받지 않았습니다. &8Flag: {flag}'
+          untrusted: '&c현재 위치에서 &4 {land}&c에서 해당 행동을 하도록 허가받지 않았습니다. &7이 영토에서 인가받지
+            않았습니다.'
+      no-edit-land: '&c편집 영토를 아직 선택하지 않았습니다. &e/lands edit &8<&eland&8> &7를 사용하여 선택하세요.'
+      name-exists: '&4 {name} &c은 이미 다른 영토나 국가의 이름입니다. &7다른 것을 선택하세요.'
+      swear-word: '&c욕설을 탐지했습니다. &7비속어를 사용하지 마세요. 안어:&c{word}'
+      action-cooldown: '&c지금 이 행동을 할 수 없습니다. &5 {time}&7를 기다려야 합니다.'
+      wilderness: '&c당신의 현재 위치에 점유된 영토가 없습니다. &7점유 작업을 수행하려면 먼저 해당 지역에 들어가세요. &e/view
+        &7를 사용하여 당신 주변의 점유된 영토를 시각화할 수 있습니다.'
+      player-offline: '&c현재 &4 {player} &c 이름의 온라인 플레이어가 존재하지 않습니다. &7오타인지 확인하세요.'
+      player-self: '&c혼자서는 해당 동작을 수행할 수 없습니다. &7당신은 정말 웃기군요! :)'
+      banks-disabled: '&7관리자가 은행을 사용할 수 없도록 설정했습니다. &8config에서 활성화할 수 있습니다.'
+      land-not-trusted: '&4 {player} &7는 &4 {land}&c의 구성원이 아닙니다. &e/lands trust&7를
+        사용하여 그를 먼저 인가할 필요가 있습니다.'
+      area-not-trusted: '&c여기서 해당 행동을 할 수 없습니다. &7영토 &2 {land}&7의 영역 &6{area}&7 에
+        인가되지 않았습니다.'
+      number: '&c입력값 &4 {input} &c이 숫자가 아닙니다. &7인수 &3 {argument} &7는 숫자여야 합니다.'
+      none: |
+        &c어떤 영토의 멤버도 아닙니다.
+
+          &7Any land can invite you: &e/lands trust
+          [T]&7Create your own land: &e/lands create[H]&7복사하려면 클릭하세요.[/H][SC]영토 생성[/SC][/T]
+      name:
+        number: '&c이름에 숫자를 사용할 수 없습니다. &7문자만 사용해주세요. 찾은 숫자:&3 {invalid}'
+        character: '&c이름에 유효하지 않은 문자를 사용할 수 없습니다. &7문자 그리고 숫자만 사용해주세요. &7찾은 유효하지 않은
+          문자:&3 {invalid}'
+        color: '&c이름에 색상 코드를 사용할 수 없습니다. &7입력값에서 색상 코드를 지우세요.'
+        length: '&c이름이 너무 깁니다. &7최대 문자 길이는 &3 {max} &7입니다. &8(&7yours: {input}&8)&7.
+          &8색상 코드를 포합하고 있습니다. &7더 짧은 이름을 제공하세요.'
+        empty: '&c이름이 유효하지 않습니다. &7색상코드 이외의 문자를 하나 이상 입력해야 합니다.'
+      money:
+        fallback: '&7공지:당신 영토 &2 {land} &7의 은행이 충분한 돈을 가지고 있지 않기 때문에, 비용 &c {cost}
+          &7을 당신의 개인 계좌에서 가져갔습니다. 예치금: [T]&8[클릭][H]&7영토 {land} 은행에 돈을 입금하려면 여기를 클릭하세요.[/H][SC]{cmd}[/SC][/T]'
+        failure:
+          bank: '&c비용을 지불할 만큼 돈이 충분하지 않습니다. &c {cost}&7이 필요합니다. 당신의 영토 은행에 돈을 입금하세요:
+            [T]&e/lands deposit {value} &8[클릭][H] &7영토 은행에 돈 {cost} 을 입금하려면 여기를 클릭하세요.[/H][C]영토
+            예치금 {value}[/C][/T]'
+          personal: '&c비용을 지불할 만큼 돈이 충분하지 않습니다. &c {cost}&7이 필요합니다.&7.'
+      input:
+        confirm: |
+          &7아래를 클릭하여 이 작업 &8(&e/{input}&8) &7을 확인하세요.:
+            [T]&2✔ 확인 &8[클릭][H]&7이 작업을 확인하려면 여기를 클릭하세요.[/H][C]{fullcmd}[/C][/T]
+        land: '&c영토 &4 {input} &c이 존재하지 않습니다. &7해당 이름을 가진 영토가 업습니다.'
+        nation: '&c국가 &4 {input} &c이 존재하지 않습니다. &7해당 이름을 가진 국가가 없습니다.'
+        holder: '&4 {input}&c의 이름을 가진 영토 혹은 국가가 없습니다. &7오타인지 확인하세요.'
+        number: '&c입력값 &4 {input} &c이 숫자가 아닙니다. &7인자 {pos}: {expected}'
+        player: '&4 {input}&c 이름을 가진 플레이어가 없습니다. &7오타인지 확인하세요.'
+        offline: '&c현재 온라인인 플레이어 중 &4 {input} &c이름을 가진 플레이어가 없습니다. &7오타인지 확인하세요.'
+        world: '&c월드 &4 {input} &c가 존재하지 않습니다. &7인자 {pos}: {expected}'
+        world-disabled: '&c이 월드에서는 비활성화되었습니다. &8월드: {input}'
+    
+    create:
+      land-other: '&c자신의 영토를 가지고 다른 영토의 멤버가 될 수 없습니다. &7영토 &2 {land} &7를 떠나는 것이 우선입니다.'
+      max:
+        land: '&c더이상 영토를 생성할 수 없습니다. &7최대 소유 영토 &3{max} &7에 도달했습니다.'
+        camp: '&c더이상 캠프를 생성할 수 없습니다. &7최대 캠프 수 &3{max} &7에 도달했습니다.'
+      success:
+        land: |
+          &c {cost}&7의 비용으로 성공적으로 영토 &2 {land} &7가 생성되었습니다.
+          미래의 행동을 위해 영토 {land} &7를 당신의 편집 영토로 설정하세요.
+            [T]&7✖ 편집 영토 변경: &3/edit &8<&3land&8> &8[클릭][SC]영토 편집[/SC][H]&7플레이어 인가 등의 행동을 위한 영토 {land} 가 편집 영토로 설정되었습니다. 변경하려면 이 명령어를 실행합니다. 복사하려면 클릭하세요.[/H][/T]
+            [T]&7✖ 청크 점유: &3/claim &8[클릭][C]영토 점유[/C][H]&7지금 서있는 부분의 청크를 점유하려면 여기를 클릭하세요.[/H][/T]
+            [T]&7✖ 선택 점유: &3/selection &8[클릭][C]선택 영토[/C][H]&7선택한 청크를 점유하려면 여기를 클릭하세요.[/H][/T]
+            [T]&7✖ 플레이어 인가: &3/trust &8[클릭][SC]영토 인가[/SC][H]&7복사하려면 클릭하세요.[/H][/T]
+        camp: '&7현재 위치의 영토 &2 {land} &7에서 캠프를 생성합니다. &c{cost}&7를 지불합니다. 
+            캠프는 확장될 수 없고 &5 {time}&7에 만료됩니다.'
+      broadcast: '&7영토 &2 {land} &7가 &3 {player}&7에 의해 생성되었습니다.'
+    rename:
+      success: '&7영토 &2 {land}&7의 새로운 이름 &3 {name} &7이 설정되었습니다.
+        &c {cost}&7를 지불했습니다.'
+    edit:
+      success: '&7영토&2 {land}&7의 편집 모드로 들어갔습니다. 
+        &e/lands claim &7또는 &e/lands trust&7와 같은 다음 액션은 이 영토에 대해 집행될 것입니다.'
+    selection:
+      max: '&c선택 항목에 청크가 너무 많습니다. &7크기:&3 {current} 
+        &7최대 크기는 &3 {max} &7청크 입니다.'
+      too-far: '&c당신이 찾고있는 블록은 너무 멀리 있습니다. &7좀 더 가까이 이동해주세요.'
+      world: '&c두 위치가 같은 월드 안에 존재해야합니다. &7첫 번째 위치와 두 번째 위치를 같은 월드에 설정하세요.'
+      pos:
+        warn: '&c경고: &7이 청크는 다른 관리 플러그인에 속합니다. 이름:&3{plugin}'
+        cancelled: '&c여기서는 선택 항목을 설정할 수 없습니다. &7이 청크는 다른 관리 플러그인에 속합니다.
+            이름:&3 {plugin}'
+      area:
+        conflicts: '&c이미 영역에 할당된 청크와의 충돌 &4 {conflicts} &c이 발견되었습니다.
+           &e/lands selection assign {area} confirm &7를 사용하여 중단을 확인하세요.
+           다음 영역에 속하는 충돌: {areas}'
+      expand:
+        enabled: '&7성공적으로 선택 항목을 아래에서 위로 확장했습니다. (최소 및 최대 점유 높이).'
+        disabled: '&7현재 선택 항목이 더이상 모든 y 좌표로 확장되지 않습니다.'
+      status:
+        complete: '#t#&6선택 완료[newline]&7점유: &e&l/claim &7점유 해제: &e&l/unclaim[newline]
+            &6&l하위 영역에 선택 항목 할당: &e&l/assign'
+        progress: '#t#&6선택[newline]&7좌: {first} &7우: {second}[newline]
+            &6&l모퉁이: &6좌/우클릭 또는 Q키 &7&l취소: &7도구 슬롯 변경'
+        reminder: |
+          &7선택이 완료되었습니다.: 다음 작업을 실행할 수 있습니다.:
+            [T]&7✖ 점유: &e/claim &8[&8클릭&8][H]&7선택 항목을 점유하려면 여기를 클릭하세요.[/H][C]영토 점유[/C][/T]
+            [T]&7✖ 점유 해제: &e/unclaim &8[&8클릭&8][H]&7선택 항목을 점유 해제하려면 여기를 클릭하세요.[/H][C]영토 점유 해제[/C][/T]
+            [T]&7✖ 하위 영역: &e/assign &8[&8클릭&8][H]&7선택 항목을 하위 영역에 할당합니다.[/H][SC]영토 할당 <area>[/SC][/T]
+        not-complete: '&c선택이 완료되지 않았습니다. &7두 위치지 모두 설정되어있는지 확인하세요.
+          [T]&e/lands selection 를 실행하여 선택 모드를 전환할 수 있습니다.
+          &8[&8클릭&8][H]&7선택 모드를 전환하려면 여기를 클릭하세요.[/H][C]lands selection[/C][/T]'
+        disabled: '#t#&6S선택[newline]&c모드 사용 안함'
+    
+    claim:
+      camp: |
+        &c캠프&4 {land} &c는 확장될 수 없습니다.
+          [T]&7✖ 영토 변경: &e/lands edit &8<&eland&8> &8[&8클릭&8][SC]영토 편집[/SC][H]&7이 명령어를 복사하려면 클릭하세요.[/H][/T]
+      create:
+        auto: |
+          &7점유할 수 있는 것이 없었기 때문에, 자동적으로 새 영토 &2 {land}&7가 생성되었습니다.
+            [T]&7✖ 개명: &e/lands rename &8<&ename&8> &8[&8클릭&8][SC]영토 개명[/SC][H]&7이 명령어를 복사하려면 클릭하세요.[/H][/T]
+        force_near: |
+          &7이전의 점유는 이 점유와 관련이 없을 것이기 때문에,  자동적으로 새 영토 &2 {land}&7가 생성되었습니다.
+            [T]&7✖ 개명: &e/lands rename &8<&ename&8> &8[&8클릭&8][SC]l영토 개명[/SC][H]&7이 명령어를 복사하려면 클릭하세요.[/H][/T]
+      region:
+        chunk: '&c여기서는 영토를 점유할 수 없습니다. &7이 청크는 이미 다른 지역 관리 플러그인에 속합니다.: {plugin}'
+        selection: '&c이 선택 항목을 점유할 수 없습니다. &7다른 지역 관리 플러그인의 지역 일부를 포함합니다.: {plugin}'
+      land: |
+        &c당신이 점유할 수 있는 땅을 소유하거나 인가받을 수 없습니다.
+          [T]&7✖ 생성하기: &e/lands create &8<&ename&8> &8[&8클릭&8][SC]영토 생성[/SC][H]&7복사하려면 클릭하세요.[/H][/T]
+      war: '&c{object}를 상대로 전쟁에 참가중인 동안에는 점유할 수 없습니다.'
+      already: '&c해당 청크를 점유할 수 없습니다. &7이미 영토&2 {land}&7에 속해 있습니다.'
+      initial-world: '&c영토&4 {land} &c의 경우 초기 영토 생성 월드 &4 {world}&c에서만 점유할 수 있습니다.
+        &7현재 당신이 살고 있는 ({current}) 월드를 위해 또 다른 영토를 만들고 싶을 수도 있습니다.: &e/lands create &8<&ename&8>'
+      near-other: '&4 {land}&c에서 너무 가깝습니다. &7영토에서 더 멀리 떨어져 있어야 합니다.
+        최소 청크 거리는 &3 {distance}&7 입니다.'
+      far-land: '&c해당 청크를 점유할 수 없습니다. &7점유지는 당신의 영토 &2 {land}&7와 연결되어 있어야 합니다.'
+      success: '&c {cost}&7의 비용으로 성공적으로 해당 청크를 점유하였습니다. &8(&7Land:&2 {land} &7X: {x} Z:
+        {z}&8). 다음 점유 비용은 &c {next}&7 입니다.'
+      already-claimed: '&c해당 영토에 속하지 않고 선택 항목에 이미 점유되지 않은 청크가 존재합니다. &8(&7X: {x} Z: {z}&8)&c. 
+        &7그것은 &2{land}&7에 속합니다.'
+      max-chunk: '&c이 영토에 대해 &4 {chunks} &c청크를 더 점유할 수 없습니다. 
+        &7영토&2 {land} &7의 최대 청크는 &3 {max} &7입니다. &8허가: lands.chunks.<number>'
+      processing: '&c처리 중인 선택 항목이 이미 있습니다. &7완료될 때까지 기다리세요.'
+      selection:
+        success: '&7성공적으로 &2 {land}&7 영토에 대해 &3 {chunks} &7청크를 점유했습니다. &c {cost}&7를 지불했습니다.'
+      radius:
+        success: '&7성공적으로 영토 &2 {land}&7에 대한 반경 {radius}의 &3 {chunks} &7개의 청크를 점유했습니다.
+          &c {cost}&7.를 지불했습니다.'
+      fill:
+        none: '&c모양을 찾을 수 없습니다. &7당신의 점유로 둘러싸인 점유 해제 지역에 서있는지 확인하세요.'
+        success: '&7당신이 서있는 곳의 모양을 채우기 위해 성공적으로 영토&2 {land} &7에 대해  &3 {chunks} &7의 청크를 점유했습니다.
+          &c {cost}&7를 지불했습니다.'
+    merge:
+      confirm: |
+        &2 {merge} &7를 &2 {land}&7로 병합할 것인지 확인하세요:
+          [T]&2✔ 확인 &8[클릭][H]&7작업을 확인하려면 여기를 클릭하십시오.[/H][C]{fullcmd}[/C][/T]
+      same: '&c같은 &4 {merge} &c 영토를 하나로 합칠 수 없습니다. &7다른 영토를 지정하십시오.'
+      max:
+        chunks: '&4 {merge} &c와 &4 {land}&c를 하나로 합칠 수 없습니다. &7Their total
+          amount of&3 {amount} &7chunks exceeds the limit of&3 {max} &7chunks for
+          your land&2 {land}&7.'
+      connection: '&cYou can''t merge land&4 {merge} &cinto&4 {land}&c. &7Their claims
+        aren''t connected in world&3 {world}&7.'
+      nation: |
+        &cYou can't merge land&4 {merge} &cinto&4 {land}&c. &7Land&2 {merge} &7is the capital of nation&9 {nation}&7.
+          [T]&7✖ Change capital: &e/nations setcapital &8<&eland&8>[H]&7Click here to change the nations capital. This will allow you to merge land {merge}. 복사하려면 클릭하세요.[/H][SC]nations setcapital[/SC][/T]
+      success: '&7You successfully merged land&2 {merge} &7into&2 {land}&7. You paid&c
+        {cost}&7.'
+    assign:
+      selection: '&cYou need to create a selection first. &7Use &e/lands selection
+        &7to create one. After that try again.'
+      default: '&cYou can''t assign the selection to a default area. &7Areas can be
+        deleted in the areas menu of the land.'
+      size: '&cYour selection is too small. &7The minimum size is&3 {min} &7blocks
+        and yours is&3 {current}&7.'
+      success: '&7You successfully resized the area&6 {area} &7of land&2 {land}&7.
+        Changes are visualized.'
+      conflict:
+        land: '&cYour selection conflicts with land&4 {land}&c. &7Please adjust your
+          selection.'
+        area: '&cYour selection conflicts with area&4 {area}&c. &7Please adjust your
+          selection.'
+    leave:
+      owner: |
+        &cYou can't leave this land. &7As the owner of a land you can delete the land or just transfer the ownership.
+          [T]&c✘ Delete &8[&8CLICK&8][C]lands delete[/C][H]&7Click to delete land&2 {land}&7.[/H][/T]
+          [T]&2✔ Transfer ownership &8[&8CLICK&8][SC]lands setowner [/SC][H]&7복사하려면 클릭하세요 this command.[/H][/T]
+      land:
+        untrusted: '&7You aren''t trusted in any areas of land&2 {land}&7.'
+        success: '&7Successfully left the whole land&2 {land}&7.'
+      area:
+        untrusted: '&7You aren''t trusted in area&6 {area} &7of the land&2 {land}&7.'
+        success: '&7Successfully left the area&6 {area} &7of the land&2 {land}&7.'
+    unclaim:
+      rental: '&cYou can''t unclaim this chunk&7, because it contains the rented/sold
+        area&6 {area}&7. Tenant:&3 {player}'
+      split: '&cYou can''t unclaim this chunk, because this would cause your land
+        to split up into parts. &7Parts that would split up are now visualized.'
+      success: '&7Successfully unclaimed this chunk &8(&7Land:&2 {land} &7X: {x} Z:
+        {z}&8)&7. You got&c {back} &7back.'
+      selection:
+        empty: '&cYou did not unclaim any chunks, because they are not claimed or
+          you''re not allowed to unclaim any of them.'
+        rental: '&cYou can''t unclaim this selection&7, because it contains the rented/sold
+          area&6 {area} &7of land&2 {land}&7. Tenant:&3 {player}'
+        split: '&7You unclaimed {success} / {size} chunks of this selection, &cbut
+          {failed} could not be unclaimed because it would result in your land being
+          split up into parts &8(a admin can disable this in config)&7. Parts that
+          would split up are now visualized. You got&c {back} &7back.'
+        partly: '&7You successfully unclaimed {success} / {size} chunks of this selection.
+          You got&c {back} &7back.'
+        success: '&7You successfully unclaimed all chunks of this selection. You got&c
+          {back} &7back.'
+    unclaimall:
+      confirm: |
+        &7Please confirm that you want to unclaim all claims of land&2 {land}&7:
+          [T]&2✔ Confirm &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
+      success: '&7You successfully unclaimed all chunks for land&2 {land} &7and got&3
+        {back} &7back.'
+    delete:
+      confirm: |
+        &7Please confirm the deletion of land&2 {land} &7by clicking below:
+          [T]&2✔ Confirm &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
+      nation: '&cYou can''t delete this land, because it''s the capital of nation&4
+        {nation}&c. &7You need to delete the nation first: &e/nations delete'
+      success: '&7Successfully deleted your land&2 {land}&7. You got&e {back} &7back.'
+      rented: '&cYou can''t delete this land, because its area&4 {area} &cis rented
+        or bought by&4 {player}&c. &7To remove the tenant, execute &e/lands rent removetenant
+        &7while standing in that area.'
+      broadcast: '&7The land&2 {land} &7was deleted by&3 {player}&7.'
+    trust:
+      own-land: '&cPlayer&4 {player} &ccan''t be invited to join another land. &7They''re
+        not allowed to have their own land and be a member of another land at the
+        same time. They need to delete their own land&2 {land} &7first.'
+      max-lands: '&7Player&3 {player} &7has already reached the maximum amount of
+        lands. &8Permission: lands.lands.<number>'
+      max-members: '&cCouldn''t trust player&4 {player} &cin land&4 {land}&c. &7Your
+        land&2 {land} &7reached its maximum of&3 {members} &7members in their land.'
+      max: '&cThe player&4 {player} &ccan''t join any more lands. &7They reached their
+        maximum of&3 {max} &7lands to join. &8Permission: lands.lands.<number>'
+      area:
+        invited: '&cThe player&4 {player} &cis already invited to the area&4 {area}
+          &cof land&4 {land}&c. &7The invite has been sent&5 {time} &7ago.'
+        trusted: '&7The player&3 {player} &7is already trusted in the area&6 {area}
+          &7of land&2 {land}&7.'
+        success: '&7Successfully invited player&3 {player} &7to the area&6 {area}
+          &7of land&2 {land}&7. They can now accept your invite.'
+        target: |
+          [T]&7Player&3 {player} &7invited you to join the area&6 {area} &7of their land&2 {land}&7.[H]&7Click to open your invites menu.[/H][C]lands invites[/C][/T] &7Taxes:&c {tax}
+            [T]&2✔ Accept &8[&8CLICK&8][H]&7Click here to accept this invite.[/H][C]lands accept {land}[/C][/T]
+            [T]&c✘ Deny &8[&8CLICK&8][H]&7Click here to deny this invite.[/H][C]lands deny {land}[/C][/T]
+      land:
+        invited: '&cThe player&4 {player} &cis already invited to the whole land&4
+          {land}&c. &7The invite has been sent&5 {time} &7ago.'
+        trusted: '&7The player&3 {player} &7is already trusted in land&2 {land}&7.'
+        success: '&7Successfully invited player&3 {player} &7to the the whole land&2
+          {land}&7. They now can accept your invite.'
+        target: |
+          [T]&7Player&3 {player} &7invited you to join their land&2 {land}&7.[H]&7Click to open your invites menu.[/H][C]lands invites[/C][/T] &7Taxes:&c {tax}
+            [T]&2✔ Accept &8[&8CLICK&8][H]&7Click here to accept this invite.[/H][C]lands accept {land}[/C][/T]
+            [T]&c✘ Deny &8[&8CLICK&8][H]&7Click here to deny this invite.[/H][C]lands deny {land}[/C][/T]
+    untrust:
+      owner: '&cLand owners can''t be untrusted. [T]&7New owners can be set using
+        &e/{cmd}&7. &8[CLICK][H]&7Click here to copy this command.[/H][SC]{cmd}[/SC][/T]'
+      area:
+        already: '&7The player&3 {player} &7isn''t trusted in this area &8(&7Area:&6
+          {area} &7Land:&2 {land}&8) &7and hasn''t received a invite previously.'
+        revoke: '&7Successfully revoked the invite for player&3 {player} &7in this
+          area &8(&7Area:&6 {area} &7Land:&2 {land}&8)&7. The player isn''t trusted.'
+        success: '&7Successfully untrusted player&3 {player} &7in this area &8(&7Area:&6
+          {area} &7Land:&2 {land}&8)&7.'
+        rental: '&cYou can''t untrust the tenant&4 {player} &cof area&4 {area}&c.
+          &7To remove the area for rental, use &e/lands rent remove &7while standing
+          on the area.'
+      land:
+        already: '&7The player&3 {player} &7isn''t trusted in any areas of the land&2
+          {land} &7and hasn''t received any invites.'
+        revoke: '&7Successfully revoked the invite for player&3 {player} &7for the
+          whole land&2 {land}&7. The player isn''t trusted in any areas.'
+        success: '&7Successfully untrusted player&3 {player} &7in the whole land&2
+          {land}&7, except for areas which they rented/bought.'
+    setrole:
+      visitor: '&cYou can''t set the&4 {role} &crole. &7If you want to untrust this
+        player, please use &e/lands untrust {player} [area]&7.'
+      land:
+        untrusted: '&cThe player&4 {player} &cisn''t trusted in the land&4 {land}&c.
+          &7Please trust them first.'
+        success: '&7Successfully set role&3 {role} &7for player&3 {player} &7in areas
+          of land&2 {land}&7, in which they''re trusted.'
+      area:
+        untrusted: '&cThe player&4 {player} &cisn''t trusted in the area&4 {area}
+          &cof land&4 {land}&c. &7Please trust them first.'
+        success: '&7Successfully set role&3 {role} &7for player&3 {player} &7in the
+          area&6 {area} &7of land&2 {land}&7.'
+    accept:
+      max: '&cYou can''t be part of any more lands. &7You reached your maximum of&3
+        {max} &7lands. &8Permission: lands.lands.<number>'
+      not-exist: '&cYou don''t have an invite from land&4 {land} &cor it expired.
+        &7Please check your input.'
+      own-land: '&cYou can''t join another land. &7You''re not allowed to have your
+        own land and be a member of another land at the same time. &7You need to delete
+        your own land&2 {land} &7first.'
+      max-lands: '&cYou can''t join any more lands. &7You can only have&3 {max} &7lands.
+        &8Permission: lands.lands.<number>'
+      max-members: '&cYou currently can''t join land&4 {land}&c. &7They reached their
+        maximum of&3 {members} &7members in their land.'
+      war: '&cYou currently can''t join land&4 {land}&c, because it is engaged in
+        a war against {object}&c. &7Try again when their war is over.'
+      notification: "&7You have&3 {invites} &7invites from other lands. \n\n [T]&7View\
+        \ received invites &8[CLICK][H]&7View all received invites from other lands.[/H][C]lands\
+        \ invites[/C][/T]\n"
+      area:
+        success: '&7Successfully accepted invite from land&2 {land} &7for the area&6
+          {area}&7.'
+        broadcast: '&2{land} &8| &7Player&3 {player} &7is now a member of the area&6
+          {area} &7in our land.'
+      land:
+        success: '&7Successfully accepted the invite from land&2 {land} &7to be trusted
+          in the whole land.'
+        broadcast: '&2{land} &8| &7Player&3 {player} &7is now a member of our land.'
+    setowner:
+      confirm: |
+        &7Please confirm that you want to set player {player} as the new owner of land&2 {land}&7:
+          [T]&2✔ Confirm &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
+      max-lands: '&cThe player&4 {player} &cisn''t allowed to own any more lands.
+        &7He already reached his maximum of&3 {max} &7own lands. &8Permission: lands.ownlands.<number>'
+      success: '&7You successfully set player&3 {player} &7as the new owner of land&2
+        {land}&7. You paid&c {cost}&7.'
+    deny:
+      not-exist: '&cYou don''t have an invite from land&4 {land} &cor it expired.
+        &7Typo?'
+      success: '&7You successfully denied the invite from land&2 {land}&7.'
+    teleport:
+      chunk-not-claimed: '&cThe destination chunk isn''t claimed &8(&7X: {x} &7Z:
+        {z}&8)&c.'
+      not-trusted: '&cYou can''t teleport to this location. &7You''re not trusted
+        in land&2 {land}&7.'
+      success: '&7Successfully teleported to X:&3 {x} &7Z:&3 {z} &7Claimed: {claimed}'
+    setspawn:
+      wilderness: '&cYou can only set the land spawn on your land. &7You either need
+        to move up or down into your land&2 {land}&7.'
+      success: '#t#&6Spawnpoint set[newline]&7Cost:&c {cost}'
+    spawn:
+      not-exist: '&cThere''s no spawn set for land&4 {land}&c. &7Someone needs to
+        set it first by executing &e/lands setspawn&7.'
+      not-allowed: '&cYou''re not allowed to teleport to the spawn of land&4 {land}&c.
+        &7They need to give you permission in their role settings to do so.'
+      chunk: '&7Land&2 {land} &7hasn''t set a land spawn &8(&e/lands setspawn&8) &7yet.
+        &7Teleported you to the initial claim of this land.'
+      success: '&7Successfully teleported to the spawn of land&2 {land} &7Cost:&c
+        {cost}'
+    wild:
+      perm: '&cYou''re not allowed to use random teleportation in the world&4 {world}&c.
+        &8You''re missing the permission {perm} for this world.'
+      no-location: '&cCouldn''t find a safe location for you that matches the filter
+        in config. &8Please adjust your max and min distance settings and set the
+        world spawn (/setworldspawn).'
+      searching: '#t#&6Searching[newline]&7Destination...'
+      success: '&7You were randomly teleported &8(&7X: {x} Z: {z}&8)&7. You paid&c
+        {cost}&7.'
+    deposit:
+      number: '&7You need to specify an amount of money. Use &e/lands deposit &8<&eamount&8>
+        &7or &e/lands deposit &8<&eland&8> <&3amount&8>&7.'
+      success: '&7You successfully put&3 {cost} &7in the bank of land&2 {land}&7.
+        &7New balance of the bank:&3 {bank}'
+    withdraw:
+      number: '&7You need to specify an amount of money. Use &e/lands withdraw &8<&eamount&8>
+        &7or &e/lands withdraw &8<&eland&8> <&3amount&8>&7.'
+      balance: '&cThere''s not enough money in the land bank of land&4 {land}&c. &7There''s
+        only&3 {bank} &7available. Expected:&3 {take}'
+      success: '&7You successfully took&3 {cost} &7out of the bank of land&2 {land}&7.
+        &7New balance of bank:&3 {bank}'
+    balance: '&7The balance of land&2 {land} &7is&3 {balance}'
+    ban:
+      area:
+        already: '&7Player&3 {player} &7is already banned in the area&6 {area} &7of
+          land&2 {land}&7.'
+        success: '&7Successfully banned player&3 {player} &7in the area&6 {area} &7of
+          land&2 {land}&7. They won''t be able to enter it or teleport to the spawn,
+          if it is located in this area.'
+        target: '&cLand&4 {land} &cbanned you from their area&4 {area} &cinside their
+          land. &7You won''t be able to enter it or teleport to the spawn, if it is
+          located in this area.'
+      land:
+        already: '&7Player&3 {player} &7is already banned in the whole land&2 {land}&7.'
+        success: '&7Successfully banned player&3 {player} &7from the whole land&2
+          {land}&7. They won''t be able to enter any areas or teleport to the spawn.'
+        target: '&cLand&4 {land} &cbanned you from their whole land&c. &7You won''t
+          be able to enter any areas of it or teleport to the spawn.'
+    unban:
+      area:
+        success: '&7Successfully unbanned player&3 {player} &7from this area &8(&7Area:&6
+          {area} &7Land:&2 {land}&8)&7.'
+      land:
+        success: '&7Successfully unbanned player&3 {player} &7from the land&2 {land}&7.'
+    chat:
+      activated: '&7Activated land chat. Send a message in public chat to chat with
+        your land.'
+      deactivated: '&7Successfully deactivated land chat.'
+      none: '&cNo land found for land chat.&7Use [T]&e/lands chat toggle &8[&8CLICK&8][H]&7Click
+        here to deactivate the chat mode.[/H][C]lands chat toggle[/C][/T] &7to deactivate
+        lands chat.'
+      format:
+        minecraft: '[NoPrefix]&2{land} &8| {role} &7{player} &8»&f {message}'
+        discord: '[NoPrefix]&2{land} &8| &9Discord &7{player} &8»&f {message}'
+        spy: '[NoPrefix]&8[&cChatSpy&8] &2{land} &8| {role} &7{player} &8»&f {message}'
+    view:
+      disabled: '&7You successfully disabled the current visualization.'
+      wilderness: '&7Enabled visualization of claims. &7Your current position is wilderness.'
+      tool: '&7The position you''re pointing at is wilderness. [T]&7Click here to
+        claim the chunk. &8[CLICK][H]&7Click to claim the chunk you''re pointing at.[/H][C]lands
+        claim mlc {world} {x} {z}[/C][/T]'
+      y-level: '&7The current position is wilderness, but the chunk is already claimed
+        by land&2 {land} &7at a different y-level.'
+      y-lock:
+        enabled: '&cToggled y-lock mode: &7The land borders will no longer follow
+          your position up and downwards.'
+        disabled: '&aToggled y-lock mode: &7The land borders will follow your position
+          up and downwards.'
+      info: |
+        [NoPrefix]
+        &7&m━━━━━━━━━<━&r &5&lLand View &7&m━>━━━━━━━━━
+        [T]&8• &7Land: &2{land} &8[&8CLICK&8][H]&7Click here to get more information about this land.[/H][C]lands info {land}[/C][/T]
+        &8• &7Level: {level}
+        &8• &7Nation: {nation}
+        &8• &7Chunk &7X: {x} Z: {z}
+        &7&lArea:&6 {area}
+         &8• &7Tax:&c {tax}
+         &8• &7Players:&7 {players}
+         &8• &7Description:&r {description}
+        &7&m━━━━━━━━━<━&r &5&lLand View &7&m━>━━━━━━━━━
+      area: |
+        [NoPrefix]
+        &7&m━━━━━━━━━<━&r &5&lArea View &7&m━>━━━━━━━━━
+        [T]&8• &7Land: &2{land} &8[&8CLICK&8][H]&7Click here to get more information about this land.[/H][C]lands info {land}[/C][/T]
+        &8• &7Level: {level}
+        [T]&7&lArea:&6 {area} &8[&8CLICK&8][H]&7Click here to get more information about this area.[/H][C]lands menu here[/C][/T]
+         &8• &7Tax:&c {tax}
+         &8• &7Players:&7 {players}
+         &8• &7Description:&r {description}
+        &7&m━━━━━━━━━<━&r &5&lArea View &7&m━>━━━━━━━━━
+    map:
+      header: '&7&m━━━━━━━━━━<━&r &2Lands Map &7&m━>━━━━━━━━━━[newline]'
+      footer: '[newline]&7&m━━━━━━━━━━<━&r &2Lands Map &7&m━>━━━━━━━━━━'
+    unstuck:
+      success: '&7Successfully teleported into the nearest unclaimed location.'
+    taxes:
+      none: '&7There aren''t any upcoming tax payments for you.'
+      upcoming:
+        header: '[NoPrefix]&7&m━━━━━━━━━<━&r &cUpcoming Taxes &7&m━>━━━━━━━━━'
+        entry: '[NoPrefix]&8- &7{land}: &c{tax}'
+        footer: |
+          [NoPrefix]&7You need to pay a total of {total} in &5{next}&7.
+          &7Balance: {balance}
+          &7&m━━━━━━━━━<━&r &cUpcoming Taxes &7&m━>━━━━━━━━━
+      changes:
+        header: |
+          [NoPrefix]
+          &7&m━━━━━━━━━<━&r &4Tax Change &7&m━>━━━━━━━━━
+          &cTaxes have been changed in some lands:
+        entry: '[NoPrefix]&8- &7{land}: {color}{tax} &8(previously: {previous})'
+        footer: |
+          [NoPrefix]
+          &7Payment in:&5 {next}
+          &7Balance: {balance}
+          &8More info: /lands taxes
+          &7&m━━━━━━━━━<━&r &4Tax Change &7&m━>━━━━━━━━━
+    upkeep:
+      none: '&7You currently don''t have to pay upkeep for any land.'
+      header: '[NoPrefix]&7&m━━━━━━━━━<━&r &cUpcoming Upkeep &7&m━>━━━━━━━━━'
+      entry: '[NoPrefix][T]{covered} {land}: {upkeep_form} &8[CLICK][C]{cmd}[/C][H]&7Click
+        here to deposit the required money.[/H][/T]'
+      footer: |
+        [NoPrefix]&7Your lands need to pay a total of {total} in &5{next} &7in order to keep up all claims or membership in their nation. &7Click above to deposit money into your land banks.
+        &7&m━━━━━━━━━<━&r &cUpcoming Upkeep &7&m━>━━━━━━━━━
+    relations:
+      self: '&cYou can''t add&4 {object} &cas an ally or enemy to itself.'
+      nation: '&cAll relations are managed by the nation&4 {nation}&c, which your
+        land is part of.'
+      allies:
+        add:
+          already: '&7{target} &7is already an ally of {object}&7.'
+          nation: |
+            &cYou can't get into an alliance with land&4 {land}&c. &7The land is governed by nation&9 {nation}&7.
+              [T]&7✖ Send Alliance request to nation&9 {nation} &7instead. &8[CLICK][H]&7Click here to send an alliance request to nation&9 {nation}&7.[/H][C]{cmd}[/C][/T]
+          success: '&7Successfully sent an ally offer to {target}&7. If they accept
+            it, you &8(&7{object}&8) &7will be allied with them.'
+        remove:
+          already: '&7{target} &7isn''t an ally of {object}&7.'
+          revoked: '&7You &8(&7{object}&8) revoked the ally offer for {target}&7.'
+          broadcast: '&7{object} &7and {target} &7are no longer allies.'
+      enemies:
+        add:
+          already: '&7{target} &7is already an enemy of {object}&7.'
+          revoked: '&7You &8(&7{object}&8) revoked the neutralization offer for {target}&7.'
+          nation: |
+            &cYou can't declare land&4 {land} &cas an enemy. &7The land is governed by nation&9 {nation}&7.
+              [T]&7✖ Declare nation&9 {nation} &7as an enemy instead. &8[CLICK][H]&7Click here to declare nation&9 {nation} &7as an enemy.[/H][C]{cmd}[/C][/T]
+          success: '&7You &8(&7{object}&8) &7and {target} &7are now enemies.'
+          broadcast: '&7{object} &7and {target} &7are now enemies.'
+        remove:
+          already: '&7{target} &7isn''t an enemy of&7 {object}&7.'
+          success: '&7Successfully sent an neutralization offer to {target}&7. If
+            they accept it, you &8(&7{object}&8) &7will no longer be enemies.'
+    confirmtp:
+      none: '&cYou have no active teleportation.'
+    
+    # Admin Commands: /lands admin
+    admin:
+      listperms:
+        header: '[NoPrefix][T]&7----------&e&l<<<<&7-[H]&7Click here to navigate to
+          the previous page.[/H][C]{cmd} checkperms {player} {previous}[/C][/T] &2Perm
+          List &7Page&3 {page} &8/&3 {pages} [T]&7-&e&l>>>>&7----------[H]&7Click
+          here to go to the next page.[/H][C]{cmd} checkperms {player} {next}[/C][/T]'
+        footer: |
+          [NoPrefix]
+          &cPlayer &4{player} &chas these permissions, because they or their wildcard (perm.*) permissions are set in your permissions plugin. &7Click on the arrows below to navigate.
+
+           &cRed = wildcard perms
+           &eYellow = numbered perms
+          [T]&7----------&e&l<<<<&7-[H]&7Click here to navigate to the previous page.[/H][C]{cmd} listperms {player} {previous}[/C][/T] &2Perm List &7Page&3 {page} &8/&3 {pages} [T]&7-&e&l>>>>&7----------[H]&7Click here to go to the next page.[/H][C]{cmd} listperms {player} {next}[/C][/T]
+# /wars
+wars:
+  message:
+    noaccess:
+      wilderness: '&cYou''re not allowed to do this in the wilderness while being
+        engaged in a war. &8Flag: {flag}'
+      general: '&cYou''re not allowed to do this in your current war against land&4
+        {land}&c. &8Flag: {flag}'
+      pillage: '&cYou can''t pillage the land&4 {land} &cwhile not enough defenders
+        are online. &7Please wait until a minimum of&3 {defenders} &7defender(s) of
+        land&2 {land} &7are online.'
+    start:
+      broadcast: '&7The war between {attacker} &7and {defender} &7started. It will
+        be over in&5 {time}&7.'
+    end:
+      broadcast: '&7The war between {attacker} &7and {defender} &7ended. It took&5
+        {time}&7.'
+      surrender: '{object} &7surrendered. The war ended and they paid&c {tribute}
+        &7to their enemy {enemy}&7.'
+      draw: '&7The war between {attacker} &7and {defender} &7ended in a draw. It took&5
+        {time}&7.'
+    kill:
+      target:
+        attackers: '&7Our team mate&a {attacker} &7got killed by the defender&c {defender}&7.'
+        defenders: '&7Our team mate&a {defender} &7got killed by the attacker&c {attacker}&7.'
+      killer:
+        attackers: '&7Our team mate&a {attacker} &7killed the defender&c {defender}&7:
+          &a+ {points} points'
+        defenders: '&7Our team mate&a {defender} &7killed the attacker&c {attacker}&7:
+          &a+ {points} points'
+    capture:
+      place:
+        wilderness: '&cYou can''t place a capture block in the wilderness. &7You need
+          to place it inside a enemy land.'
+        overlap: '&cCapture blocks must be placed in a way that the beacon wouldn''t
+          overlap with the wilderness.'
+        outskirts: '&cCan''t place capture point here. &7You must place it in the
+          outskirts of the land.'
+        state: '&cYou''re currently not at war against land&4 {land} &cor the war
+          hasn''t started yet.'
+        y: '&cCan''t place capture point here. &7It must be placed between&3 {min}
+          &7and&3 {max} &7blocks of height.'
+        already: '&cCan''t place capture point here. &7There''s already a capture
+          point placed in this chunk.'
+        space: '&cCan''t place capture point here. &7There''s not enough space at
+          this position.'
+        cooldown: '&cYou need to wait&4 {time} &cbefore your team can place a capture
+          point again.'
+        max: '&cYour team already placed the maximum amount of&4 {max} &csimultaneously
+          capture points.'
+        invader: '#t#&aCapture Point[newline]&aplaced in enemy land: {land}, {x},
+          {y}, {z}[newline]&aJoin them to capture the area.'
+        defender: '#t#&cCapture Point[newline]&cplaced in our land: {land}, {x}, {y},
+          {z}[newline]&cGo there to join the defenders.'
+      destroy:
+        presense: '&cYou currently can''t break this capture point. &7There are still&3
+          {players} &7enemy players in this area.'
+        invader: '#t#&cCapture Point[newline]&cin enemy land {land} has been destroyed'
+        defender: '#t#&aCapture Point[newline]&aremoved from our land {land}[newline]&2&l+
+          {points} points'
+      none: '#b#[config]color:green,style:solid[/config]&aNo invaders in this area.'
+      broadcast: '#b#[config]color:red,style:solid[/config]&cEnemy is capturing a
+        part of {land} - {progress}%, {players} invader(s), x: {x}, y: {y}, z: {z}'
+      invaders: '#b#[config]style:solid[/config]&cWe are capturing - {progress}%,
+        {players} invader(s)'
+      defenders: '#b#[config]style:solid[/config]&cEnemy is capturing - {progress}%,
+        {players} invader(s)'
+      online: '#a#&cCan''t capture: {min} player(s) of land {land} need to be online.'
+      success:
+        invader: '#t#&aCapture Point[newline]&awe captured {chunks} chunk(s) from
+          {land}[newline]&2&l+ {points} points'
+        defender: '#t#&cCapture Point[newline]&cenemy captured {chunks} chunks(s)
+          of {land}'
+  command:
+    general:
+      no-war: '&cThere aren''t any upcoming or active wars for {object}&c. &7Everything
+        is peaceful.'
+    declare:
+      confirm: |
+        &7Please confirm that you &8(&7{attacker}&8) &7want to declare war against {defender}&7:
+          [T]&2✔ Confirm &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
+      not-allowed: '&cYou''re not allowed to start a war for {object}&c. &7The leader
+        of {object} &7needs to do this.'
+      member: '&cYou can''t declare war against {object}&c. &7You or the enemy leader
+        are trusted in common lands and / or a nation.'
+      enemies: |
+        &cYou must add&4 {object} &cas an enemy first.
+          [T]&7✖ Add as Enemy &8[CLICK][H]&7Click here to add {object} &7as an enemy in order to declare war on them.[/H][C]{cmd}[/C][/T]
+      ally: |
+        &cYou can''t declare war against your ally {object}&c.
+          [T]&7✖ Manage Relations &8[CLICK][H]&7Click here to manage your relations.[/H][C]{cmd}[/C][/T]
+      war-shield: '&cYou currently can''t declare war against {object}&c. &7They have
+        a war shield for the next&5 {time}&7.'
+      no-nation: '&cYou can''t attack land&4 {land}&c. &7They must be part of a nation
+        to be engaged in a war.'
+      admin: '&cYou can''t declare war against admin lands.'
+      nation: '&cYou can''t declare war against {object}&c. &7They''re part of the
+        same nation&9 {nation}&7.'
+      balance: '&cCan''t send this declaration. &7The attackers {object} &7need a
+        minimum balance of&c {min} &7in order to start a war. Deposit money into your
+        land bank: [T]&e/lands deposit {value} &8[CLICK][H]&7Click here to deposit
+        {min} into your land bank.[/H][C]lands deposit {value}[/C][/T]'
+      online: '&cCan''t send this declaration. &7At least one player of {object} &7need
+        to be online.'
+      broadcast: '&7The enemy {attacker} &7declared war against {defender}&7. Their
+        war will start in&5 {time}&7.'
+      success: '&7You &8({object}&8) &7successfully declared war against {enemy}&7.
+        The war will start in&5 {time}&7.'
+      target: '&7The enemy {attacker} &7declared war against {defender} &8(&7YOU&8)&7.
+        The war will start in&5 {time}&7.'
+      mutual:
+        success: '&7You &8({attacker}&8) &7successfully sent a war declaration to
+          {defender}&7. &7They now need to accept or deny it, before the war can start.
+          &7If the defenders surrender during war, they will need to pay&c {tribute}
+          &7to the attackers.'
+        target: |
+          &7The enemy {attacker} &7send a war declaration against {defender} &8(&7YOU&8)&7. &7If the defenders surrender during war, they will need to pay&c {tribute} &7to the attackers.
+           [T]&2✔ Accept &8[&8CLICK&8][H]&7Click here to accept the war declaration.[/H][C]wars declare {input}[/C][/T]
+           [T]&c✘ Deny &8[&8CLICK&8][H]&7Click here to deny the war declaration.[/H][C]wars deny[/C][/T]
+      already:
+        attacker: '&cCan''t join another war. &7The current war of {object} &7needs
+          to end first.'
+        defender: '&cYou currently can''t declare war against them. &7The target {object}
+          &7is already engaged in a war.'
+      min-players:
+        attacker: '&cYou can''t engage in a war, because {object} &cneeds more trusted
+          players. &7The required minimum for attackers to declare war is&3 {min}
+          &7players.'
+        defender: '&cYou can''t declare war against {object}&c, because they need
+          more trusted players. &7The required minimum for defenders to receive a
+          war declaration is&3 {min} &7players.'
+    deny:
+      attacker: '&cAttackers can''t deny their own war declaration. &7Only the defender
+        can do that.'
+      ongoing: '&cYou can''t deny the ongoing war against {enemy}&c. &7You can only
+        deny war declarations for {object}&7.'
+      success: '&7You successfully denied the war declaration for {object} &7against
+        the enemy {enemy}&7.'
+    menu:
+      mutual: '&cYou can''t open the war menu right now. &7The war declaration to
+        {object} &7hasn''t been accepted yet.'
+    spawn:
+      none: '&cThe enemy {enemy} &chas no claims to teleport to.'
+      success: '&7You were teleported near the border of enemy {enemy}&7.'
+    info:
+      war: |
+        &4Current War:
+        &8- &7Attacker {attacker}&7:
+             &8• &7Captures: {att_cap}
+             &8• &7Kills: {att_kills}
+               &3= {att_points} / {towin} &7points to win
+               {att_bar}
+        &8- &7Defender {defender}&7:
+             &8• &7Captures: {def_cap}
+             &8• &7Kills: {def_kills}
+               &3= {def_points} / {towin} &7points to win
+               {def_bar}
+
+        &7Timeout:&5 ~{time}
+        [T]&7More info: &e/wars &8[CLICK][H]&7Click here to open the war menu.[/H][C]wars menu[/C][/T]
+      declaration:
+        normal: |
+          &4War Declaration:
+            &8• &7Attacker: {attacker}
+            &8• &7Defender: {defender}
+            &8• &7Starts in:
+              &5~{time}
+
+          [T]&7More info: &e/wars &8[CLICK][H]&7Click here to open the war menu.[/H][C]wars menu[/C][/T]
+        mutual:
+          defender: |
+            &4War Declaration:
+              &8• &7Attacker: {attacker}
+              &8• &7Defender: {defender}
+              &8• &7If you surrender during war:
+                &7Tribute:&c {tribute}
+
+            [T]&2✔ Accept &8[&8CLICK&8][H]&7Click here to accept the war declaration.[/H][C]Wars declare {input}[/C][/T]
+            [T]&c✘ Deny &8[&8CLICK&8][H]&7Click here to deny the war declaration.[/H][C]Wars deny[/C][/T]
+          attacker: |
+            &4War Declaration:
+              &8• &7Attacker: {attacker}
+              &8• &7Defender: {defender}f
+              &8• &7If the defenders surrender:
+                &7Tribute:&c {tribute}
+
+            &cThe defender hasn't accepted
+            &cthe declaration yet.
+# /nations
+nations:
+  message:
+    current-war: '&cYou can''t do this right now. &7Your nation&9 {nation} &7is currently
+      engaged in a war. &7Please try again after the war is over.'
+    untrusted: '&cYou''re not a member of nation&4 {nation}&c.'
+  command:
+    chat:
+      activated: '&7Activated nation chat. Send a message in public chat to chat with
+        your nation.'
+      deactivated: '&7Successfully deactivated nation chat.'
+      none: '&cNo nation found for nation chat. &7Use [T]&e/nations chat toggle &8[&8CLICK&8][H]&7Click
+        here to deactivate the chat mode.[/H][C]nations chat toggle[/C][/T] &7to deactivate
+        nation chat.'
+      format:
+        minecraft: '[NoPrefix]&9Nation {nation} &8| &7{player} &8»&f {message}'
+        discord: '[NoPrefix]&9Nation {nation} &8| &9Discord &7{player} &8»&f {message}'
+        spy: '[NoPrefix]&8[&cChatSpy&8] &9Nation {nation} &8| &7{player} &8»&f {message}'
+    general:
+      not-exist: '&cThe nation&9 {nation} &cdoesn''t exist. &7There''s no nation with
+        this name.'
+      no-member: '&cYou''re not a member of this nation&c. &7None of your lands is
+        part of the nation&9 {nation}&7.'
+      none: |
+        &cYour land&4 {land} &cisn't part of any nation.
+
+          &7Any nation can invite your land: &e/nations trust
+          [T]&7Create your own nation: &e/nations create[H]&7복사하려면 클릭하세요.[/H][SC]nations create[/SC][/T]
+      noaccess: '&cYou''re not allowed to do this for nation&4 {nation}&c. &8Flag:
+        {flag}'
+      not-trusted: '&cThe land&4 {land} &cisn''t a member of your nation&4 {nation}&c.'
+    
+    create:
+      camp: |
+        &cYou can't create a nation with a camp &8(&4{land}&8) &cas the capital.
+          [T]&7✖ Change edit land: &3/edit &8<&3land&8> &8[CLICK][SC]lands edit[/SC][H]&7Use this command to change the edit land, which you want to be the capital of your nation. 복사하려면 클릭하세요.[/H][/T]
+      already: '&cYour land&4 {land} &cis already part of the nation&4 {nation}&c.
+        &7Your land needs to leave it first by executing &e/nations leave&7.'
+      war: '&cYou can''t create a nation with land&4 {land} &cas the capital while
+        it is engaged in a war against&4 {object}&c. &7Please try again after the
+        war is over.'
+      level: '&cYou currently can''t create a nation. &7Your land&2 {land} &7needs
+        to be at least level&3 {level} &8(&7current: {current}&8)&7.'
+      success: '&7You successfully created the nation&9 {nation} &7with the land&2
+        {land} &7as the capital. [T]&7Click here to open the menu.[H]&7Open the menu.[/H][C]nations
+        menu[/C][/T]'
+    trust:
+      camp: '&cCamps can''t be part of nations. &7The land&2 {land} &7is a camp.'
+      already: '&cThe land&4 {land} &cis already part of the nation&4 {nation}&c.
+        &7They need to leave it first by using &e/nations leave&7.'
+      added: '&7You successfully added your land&2 {land} &7as a member of your nation&9
+        {nation}&7.'
+      success: '&7You successfully invited land&2 {land} &7to join your nation&9 {nation}&7.'
+      target: |
+        &7Nation&9 {nation} &7invited your land&2 {land} &7to join them.
+          [T]&2✔ Accept &8[&8CLICK&8][H]&7Click here to accept this invite.[/H][C]nations accept {nation}[/C][/T]
+          [T]&c✘ Deny &8[&8CLICK&8][H]&7Click here to deny this invite.[/H][C]nations deny {nation}[/C][/T]
+    accept:
+      war: '&cYou can''t join this nation right now. &7Nation&9 {nation} &7is currently
+        engaged in a war against {object}&7. Please try again once their war is over.'
+      none: '&cYour land&4 {land} &cdidn''t receive any invite from nation&9 {nation}&c.
+        &7They can invite your land by executing &e/nations trust&7.'
+      already: '&cYour land&4 {land} &cis already part of nation&4 {nation}&c. &7You
+        need to leave it first by executing &e/nations leave&7.'
+      success: '&7Your land&2 {land} &7is now part of nation&9 {nation}&7.'
+    deny:
+      success: '&7You successfully denied the invite from nation&9 {nation}&7.'
+    untrust:
+      capital: '&cYou can''t remove this land. &7Land&2 {land} &7is the capital of
+        nation&9 {nation}&7.'
+      already: '&cLand&4 {land} &cisn''t trusted in nation&4 {nation}&c.'
+      success: '&7You successfully removed land&2 {land} &7from nation&9 {nation}&7.'
+    delete:
+      confirm: |
+        &7Please confirm the deletion of nation&9 {nation} &7by clicking below:
+          [T]&2✔ Confirm &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
+      war: '&cYou currently can''t delete your nation. &7Nation&9 {nation} &7is currently
+        engaged in a war against {object}&7. Please try again when the war is over.'
+      success: '&7Successfully deleted this nation &8(&7Nation:&2 {nation}&8)&7.'
+    leave:
+      confirm: |
+        &7Please confirm that you want to remove land&2 {land} &7from nation&9 {nation}&7:
+          [T]&2✔ Confirm &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
+      capital: '&cYour land&4 {land} &ccan''t leave nation&4 {nation}&c, because the
+        land is the capital of this nation. &7To delete your nation, execute &e/nations
+        delete&7.'
+      war: '&cYou can''t leave this nation right now. &7Nation&9 {nation} &7is currently
+        engaged in a war against {object}&7. Your war will be over in&5 {time}&7.'
+      success: '&7You successfully left nation&9 {nation} &7with land&2 {land}&7.'
+    rename:
+      success: '&7Successfully set the new name&3 {name} &7for this nation &8(&7Nation:&9
+        {nation}&8)&7. You paid&c {cost}&7.'
+    setcapital:
+      confirm: |
+        &7Please confirm that you want to set land&2 {land} &7as the new capital of nation&9 {nation}&7:
+          [T]&2✔ Confirm &8[CLICK][H]&7Click here to confirm this action.[/H][C]{fullcmd}[/C][/T]
+      level: '&cYou can''t set the land&4 {land} &cas the new capital of nation&4
+        {nation}&c. &7It needs to be at least level&3 {level} &8(&7current: {current}&8)&7.'
+      success: '&7Successfully set the land&2 {land} &7as the new capital of nation&9
+        {nation}&7.'
+
+
+# Sign lines, Hologram lines etc.
+list:
+  # Blacklist words for land names etc.
+  swear-words: []
+  
+  # Leaderboard and Rent Signs
+  sign:
+    rent:
+    - '&6임대 {area} &8[CLICK]'
+    - '&5{time}&7 마다 &c{cost}'
+    - '&7최대 기간: {max}'
+    - '&8클릭하여 임대.'
+    sell:
+      area:
+      - '&a구매 &8[CLICK]'
+      - '&7영역&6 {area}'
+      - '&7총 &c{cost}'
+      - '&8클릭하여 구매.'
+      land:
+      - '&a구매 &8[CLICK]'
+      - '&7영토 &2 {land}'
+      - '&7총 &c{cost}'
+      - '&8클릭하여 구매.'
+    rented:
+    - '&7영역&6 {area} &8[CLICK]'
+    - '&7임차인: {player}'
+    - '&5{time} &7남음'
+    - '&5{time}&7 마다 &c{cost}'
+    - '&8클릭: 시간 추가'
+    - '&8Shift + 클릭: 취소'
+    sold:
+      area:
+      - '&7영역&6 {area}'
+      - '&7에게 &a판매됨'
+      - '&7플레이어 {player}'
+      - '&8Shift + 클릭: 취소'
+      land:
+      - '&7영토&2 {land}'
+      - '&7에게 &a판매됨'
+      - '&7플레이어 {player}'
